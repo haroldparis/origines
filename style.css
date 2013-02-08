@@ -1,0 +1,18 @@
+/*
+Theme Name: Origines
+Theme URI: http://www.tribeleadr.com/
+Description: Theme WordPress utilisant Bootstrap.
+Author: Harold Paris
+Author URI: http://haroldparis.fr/
+Version: 0.1
+Tags: 
+
+License:
+License URI:
+
+I love WordPress and Bootstrap !
+*/
+
+@import url("css/bootstrap.min.css");
+
+@import url("css/bootstrap-responsive.min.css");
