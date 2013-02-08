@@ -49,4 +49,29 @@ function origines_widgets_init() {
 }
 add_action( 'widgets_init', 'origines_widgets_init' );
 
+/**
+ * Registers our menus.
+ */
+function origines_menu_init() {
+	register_nav_menus(
+		array( 'header-menu' => __( 'Header Menu' ) )
+	);
+	
+	register_nav_menus(
+		array( 'footer-menu' => __( 'Footer Menu' ) )
+	);
+}
+add_action( 'init', 'origines_menu_init' );
+
+/**
+ * Change current-menu-item to active.
+ */
+add_filter( 'nav_menu_css_class', 'additional_active_item_classes', 10, 2 );
+function additional_active_item_classes($classes = array(), $menu_item = false){
+    if(in_array('current-menu-item', $menu_item->classes)){
+        $classes[] = 'active';
+    }
+    return $classes;
+}
+
 ?>
