@@ -15,7 +15,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
     	<div class="container">
         	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -24,7 +24,8 @@
         	<span class="icon-bar"></span>
         	</button>
         	<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-        		<?php wp_nav_menu( array( 'menu' => 'Header Menu', 'container' => div, 'container_class' => 'nav-collapse collapse', 'menu_class' => 'nav', 'walker' => new twitter_bootstrap_nav_walker() )); ?>
+        	<?php wp_nav_menu( array( 'menu' => 'Header Menu', 'container' => div, 'container_class' => 'nav-collapse collapse', 'menu_class' => 'nav', 'walker' => new twitter_bootstrap_nav_walker() )); ?>
+        	<?php get_search_form(); ?>
     	</div>
     </div>
 </div>
