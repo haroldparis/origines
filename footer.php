@@ -1,27 +1,29 @@
 <?php if ( is_active_sidebar( 'footer1' ) or is_active_sidebar( 'footer2' ) or is_active_sidebar( 'footer3' ) or is_active_sidebar( 'footer4' ) ) : ?>
 
-<div class="row">
+<hr />
+
+<div class="row footer-widget-area">
 
 <?php if ( is_active_sidebar( 'footer1' ) ) : ?>
-	<div class="footer-widget-area span<?php origines_footer_count_for_span(); ?>">
+	<div class="footer-widget-element span<?php origines_footer_count_for_span(); ?>">
 		<?php dynamic_sidebar( 'footer1' ); ?>
 	</div>
 <?php endif; ?>
 
 <?php if ( is_active_sidebar( 'footer2' ) ) : ?>
-	<div class="footer-widget-area span<?php origines_footer_count_for_span(); ?>">
+	<div class="footer-widget-element span<?php origines_footer_count_for_span(); ?>">
 		<?php dynamic_sidebar( 'footer2' ); ?>
 	</div>
 <?php endif; ?>
 
 <?php if ( is_active_sidebar( 'footer3' ) ) : ?>
-	<div class="footer-widget-area span<?php origines_footer_count_for_span(); ?>">
+	<div class="footer-widget-element span<?php origines_footer_count_for_span(); ?>">
 		<?php dynamic_sidebar( 'footer3' ); ?>
 	</div>
 <?php endif; ?>
 
 <?php if ( is_active_sidebar( 'footer4' ) ) : ?>
-	<div class="footer-widget-area span<?php origines_footer_count_for_span(); ?>">
+	<div class="footer-widget-element span<?php origines_footer_count_for_span(); ?>">
 		<?php dynamic_sidebar( 'footer4' ); ?>
 	</div>
 <?php endif; ?>
@@ -31,8 +33,14 @@
 <?php endif; ?>
 
 <hr />
+
 <footer role="contentinfo">
-	<p>Le Copyright</p>
+	<div id="copyright" class="pull-left">
+		<p><small>Copyright &copy; <?php $the_year = date("Y"); echo $the_year; ?> <a href="<?php bloginfo('url');?>"><?php bloginfo('name'); ?></a> All Rights Reserved.</small></p>
+	</div>
+	<div id="Links" class="pull-right">
+		<p><small>Proudly Powered by <a href="http://wordpress.org/" title="WordPress">WordPress</a> and <a href="#" title="Themes WordPress">Origines</a> - Design by <a href="http://www.tribeleadr.com/" title="Agence Social Media et Web à Orléans">TRIBELEADR</a></small></p>
+	</div>
 </footer>
 
 </div><!-- .container -->

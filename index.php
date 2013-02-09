@@ -36,7 +36,7 @@
 		<?php else : ?>
 		
 		<div class="entry-content clearfix">
-			<?php the_content( __( '<p>Continue reading <span class="meta-nav">&rarr;</span></p>', 'origines' ) ); ?>
+			<?php the_content( __( '<p><button class="btn"><i class="icon-plus-sign"></i> Continue reading...</button></p>', 'origines' ) ); ?>
 		</div><!-- .entry-content -->
 		
 		<?php endif; ?>
@@ -59,8 +59,8 @@
 					</div><!-- .author-description -->
 				</div><!-- .author-info -->
 			<?php endif; ?>
-			<hr />
 		</footer><!-- .entry-meta -->
+		<hr />
 	</article><!-- #post -->
 	
 			<?php endwhile; // end the Loop. ?>
