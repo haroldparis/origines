@@ -2,6 +2,12 @@
 
 <div class="container">
 
+<?php if ( is_active_sidebar( 'hero' ) ) : ?>
+	<div id="hero" class="widget-area hero-unit">
+		<?php dynamic_sidebar( 'hero' ); ?>
+	</div><!-- #hero -->
+<?php endif; ?>
+
 <div class="row">
 	<div class="span9">
 

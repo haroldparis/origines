@@ -8,10 +8,20 @@
  */
 function origines_widgets_init() {
 	register_sidebar( array(
+		'name' => __( 'Hero', 'origines' ),
+		'id' => 'hero',
+		'description' => __( 'Appears on the homepage in a Bootstrap Hero Unit. Use text component.', 'origines' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
 		'name' => __( 'Sidebar', 'origines' ),
 		'id' => 'sidebar',
 		'description' => __( 'Appears on posts and pages except if full-width template is selected.', 'origines' ),
-		'before_widget' => '<aside id="sidebar" class="widget">',
+		'before_widget' => '<aside class="widget">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
@@ -21,7 +31,7 @@ function origines_widgets_init() {
 		'name' => __( 'Footer 1', 'origines' ),
 		'id' => 'footer1',
 		'description' => __( 'Appears on posts and pages on the left side of the footer.', 'origines' ),
-		'before_widget' => '<div id="footer1" class="widget">',
+		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
@@ -30,8 +40,9 @@ function origines_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Footer 2', 'origines' ),
 		'id' => 'footer2',
+		'class' => 'footer-widget',
 		'description' => __( 'Appears on posts and pages on the center of the footer.', 'origines' ),
-		'before_widget' => '<div id="footer2" class="widget">',
+		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
@@ -41,7 +52,7 @@ function origines_widgets_init() {
 		'name' => __( 'Footer 3', 'origines' ),
 		'id' => 'footer3',
 		'description' => __( 'Appears on posts and pages on the right side of the footer.', 'origines' ),
-		'before_widget' => '<div id="footer3" class="widget">',
+		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
@@ -51,7 +62,7 @@ function origines_widgets_init() {
 		'name' => __( 'Footer 4', 'origines' ),
 		'id' => 'footer4',
 		'description' => __( 'Appears on posts and pages on the right side of the footer.', 'origines' ),
-		'before_widget' => '<div id="footer4" class="widget">',
+		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
