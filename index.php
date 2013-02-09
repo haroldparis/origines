@@ -3,7 +3,7 @@
 <div class="container">
 
 <div class="row">
-	<div class="span8">
+	<div class="span9">
 
 		<?php if ( have_posts() ) : ?>
 

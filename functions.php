@@ -46,6 +46,16 @@ function origines_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Footer 4', 'origines' ),
+		'id' => 'footer4',
+		'description' => __( 'Appears on posts and pages on the right side of the footer.', 'origines' ),
+		'before_widget' => '<div id="footer4" class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'origines_widgets_init' );
 
@@ -259,12 +269,15 @@ function origines_footer_count_for_span() {
 	if ( is_active_sidebar( 'footer1' ) ) { $footer1_count = 1; } else { $footer1_count = 0; }
 	if ( is_active_sidebar( 'footer2' ) ) { $footer2_count = 1; } else { $footer2_count = 0; }
 	if ( is_active_sidebar( 'footer3' ) ) { $footer3_count = 1; } else { $footer3_count = 0; }
+	if ( is_active_sidebar( 'footer4' ) ) { $footer4_count = 1; } else { $footer4_count = 0; }
 	
-	$footer_all_count = $footer1_count + $footer2_count + $footer3_count;
+	$footer_all_count = $footer1_count + $footer2_count + $footer3_count + $footer4_count;
 	
 	// Send the right span number.
 	if ( $footer_all_count == 1 ) { $footer_span = 12; } else { 
-		if ( $footer_all_count == 2 ) { $footer_span = 6; } else { $footer_span = 4; }
+		if ( $footer_all_count == 2 ) { $footer_span = 6; } else { 
+			if ( $footer_all_count == 3 ) { $footer_span = 4; } else { $footer_span = 3; }
+		}
 	}
 	
 	echo ( $footer_span );
