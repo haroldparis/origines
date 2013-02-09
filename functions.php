@@ -295,4 +295,13 @@ function origines_footer_count_for_span() {
 	
 }
 
+/**
+ * Get the gravatar origines style.
+ */
+function origines_get_avatar($email, $size) {
+      $grav_url = "http://www.gravatar.com/avatar/" . 
+         md5(strtolower($email)) . "?s=" . $size;
+      echo "<img src='$grav_url' class='media-object img-polaroid' />";
+}
+
 ?>

@@ -44,21 +44,22 @@
 		<footer class="entry-meta">
 			<p><small><?php origines_entry_meta(); ?></small></p>
 			<?php if ( is_singular() ) : // If a user has filled out their description, show a bio on their entries. ?>
-				<div class="author-info">
-					<div class="author-avatar">
-						<?php echo get_avatar( get_the_author_meta( 'user_email' ), 68 ); ?>
-					</div><!-- .author-avatar -->
-					<div class="author-description">
-						<h2><?php printf( __( 'About %s', 'origines' ), get_the_author() ); ?></h2>
+				<div class="author-info well media">
+					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" alt="<?php the_author(); ?>" id="author-avatar" class="pull-left">
+						<?php origines_get_avatar( get_the_author_meta( 'user_email' ), 96); ?>
+					</a>
+					<div class="author-description media-body">
+						<h4 class="media-heading"><?php printf( __( 'About %s', 'origines' ), get_the_author() ); ?></h4>
 						<p><?php the_author_meta( 'description' ); ?></p>
 						<div class="author-link">
 							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-								<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'twentytwelve' ), get_the_author() ); ?>
+								<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'origines' ), get_the_author() ); ?>
 							</a>
 						</div><!-- .author-link	-->
 					</div><!-- .author-description -->
 				</div><!-- .author-info -->
 			<?php endif; ?>
+			<hr />
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->
 	
