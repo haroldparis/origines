@@ -35,15 +35,15 @@
 		
 		<?php else : ?>
 		
-		<div class="entry-content">
-			<?php the_content(); ?>
+		<div class="entry-content clearfix">
+			<?php the_content( __( '<p>Continue reading <span class="meta-nav">&rarr;</span></p>', 'origines' ) ); ?>
 		</div><!-- .entry-content -->
 		
 		<?php endif; ?>
 
 		<footer class="entry-meta">
 			<p><small><?php origines_entry_meta(); ?></small></p>
-			<?php if ( is_singular() ) : // If a user has filled out their description, show a bio on their entries. ?>
+			<?php if ( is_singular() && get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries. ?>
 				<div class="author-info well media">
 					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" alt="<?php the_author(); ?>" id="author-avatar" class="pull-left">
 						<?php origines_get_avatar( get_the_author_meta( 'user_email' ), 96); ?>

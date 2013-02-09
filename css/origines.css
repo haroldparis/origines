@@ -5,3 +5,13 @@ Origines Specific CSS
 body {
 	padding: 40px 0;
 }
+
+.alignright {
+	float: right;
+	margin-left: 10px;
+}
+
+.alignleft {
+  	float: left;
+  	margin-right: 10px;
+}
