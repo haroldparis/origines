@@ -24,7 +24,7 @@
         	<span class="icon-bar"></span>
         	</button>
         	<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-        	<?php wp_nav_menu( array('menu' => 'Header Menu', 'container_class' => 'nav-collapse collapse', 'items_wrap' => '<ul class="nav">%3$s</ul>' )); ?>
+        	<?php wp_nav_menu( array( 'menu' => 'Header Menu', 'container' => false, 'menu_class' => 'nav', 'walker' => new twitter_bootstrap_nav_walker() )); ?>
     	</div>
     </div>
 </div>
