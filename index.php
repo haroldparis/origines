@@ -42,7 +42,7 @@
 		<?php endif; ?>
 
 		<footer class="entry-meta">
-			<?php origines_entry_meta(); ?>
+			<p><small><?php origines_entry_meta(); ?></small></p>
 			<?php if ( is_singular() ) : // If a user has filled out their description, show a bio on their entries. ?>
 				<div class="author-info">
 					<div class="author-avatar">
@@ -68,24 +68,9 @@
 
 			<article id="post-0" class="post no-results not-found">
 
-			<?php if ( current_user_can( 'edit_posts' ) ) : // Show a different message to a logged-in user who can add posts. ?>
-				<header class="entry-header">
-					<h1 class="entry-title">No posts to display.</h1>
-				</header>
-
-				<div class="entry-content">
-					<p>Ready to publish your first post? <a href="<?php admin_url( 'post-new.php' ); ?>">Get started here</a></p>
-				</div><!-- .entry-content -->
-
-			<?php else : // Show the default message to everyone else. ?>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
-				</header>
-
 				<div class="entry-content">
 					<p>Apologies, but no results were found.</p>
 				</div><!-- .entry-content -->
-			<?php endif; // end current_user_can() check. ?>
 
 			</article><!-- #post-0 -->
 
