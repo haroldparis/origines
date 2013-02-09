@@ -1,5 +1,31 @@
+<?php if ( is_active_sidebar( 'footer1' ) or is_active_sidebar( 'footer2' ) or is_active_sidebar( 'footer3' ) ) : ?>
+
+<div class="row">
+
+<?php if ( is_active_sidebar( 'footer1' ) ) : ?>
+	<div class="footer-widget-area span<?php origines_footer_count_for_span(); ?>">
+		<?php dynamic_sidebar( 'footer1' ); ?>
+	</div>
+<?php endif; ?>
+
+<?php if ( is_active_sidebar( 'footer2' ) ) : ?>
+	<div class="footer-widget-area span<?php origines_footer_count_for_span(); ?>">
+		<?php dynamic_sidebar( 'footer2' ); ?>
+	</div>
+<?php endif; ?>
+
+<?php if ( is_active_sidebar( 'footer3' ) ) : ?>
+	<div class="footer-widget-area span<?php origines_footer_count_for_span(); ?>">
+		<?php dynamic_sidebar( 'footer3' ); ?>
+	</div>
+<?php endif; ?>
+
+</div> <!-- .row -->
+
+<?php endif; ?>
+
 <hr />
-<footer>
+<footer role="contentinfo">
 	<p>Lorem ipsum de Copyright</p>
 </footer>
 

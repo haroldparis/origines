@@ -115,4 +115,24 @@ function origines_entry_meta() {
 	);
 }
 
+/**
+ * Check the number of active footer widgets and returns an integer for styling purpose.
+ */
+function origines_footer_count_for_span() {
+	// Count active sidebars.
+	if ( is_active_sidebar( 'footer1' ) ) { $footer1_count = 1; } else { $footer1_count = 0; }
+	if ( is_active_sidebar( 'footer2' ) ) { $footer2_count = 1; } else { $footer2_count = 0; }
+	if ( is_active_sidebar( 'footer3' ) ) { $footer3_count = 1; } else { $footer3_count = 0; }
+	
+	$footer_all_count = $footer1_count + $footer2_count + $footer3_count;
+	
+	// Send the right span number.
+	if ( $footer_all_count == 1 ) { $footer_span = 12; } else { 
+		if ( $footer_all_count == 2 ) { $footer_span = 6; } else { $footer_span = 4; }
+	}
+	
+	echo ( $footer_span );
+	
+}
+
 ?>
