@@ -13,7 +13,7 @@
 	<![endif]-->
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">

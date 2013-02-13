@@ -3,7 +3,7 @@
 <div class="container">
 
 <div class="row">
-	<div class="span9">
+	<div class="span9" itemprop="mainContentOfPage">
 	
 		<?php if ( function_exists('mybread') ) mybread(); ?>
 	
@@ -40,10 +40,14 @@
 		</footer><!-- .entry-meta -->
 		</article><!-- #post -->
 		
-		<nav class="nav-single clearfix">
-			<span class="nav-previous pull-left"><?php previous_post_link( '%link', '<button class="btn meta-nav"><i class="icon-arrow-left"></i> Previous post : <strong>%title</strong></button>' ); ?></span>
-			<span class="nav-next pull-right"><?php next_post_link( '%link', '<button class="btn meta-nav">Next post : <strong>%title</strong> <i class="icon-arrow-right"></i></button>' ); ?></span>
-		</nav><!-- .nav-single -->
+		<ul class="pager">
+  			<li class="previous">
+    			<?php previous_post_link( '%link', '<i class="icon-arrow-left"></i> Previous post: <strong>%title</strong>' ); ?>
+  			</li>
+  			<li class="next">
+    			<?php next_post_link( '%link', 'Next post: <strong>%title</strong> <i class="icon-arrow-right"></i>' ); ?>
+  			</li>
+		</ul>
 	
 		<?php endwhile; // end the Loop. ?>
 		
