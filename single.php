@@ -4,6 +4,9 @@
 
 <div class="row">
 	<div class="span9">
+	
+		<?php if ( function_exists('mybread') ) mybread(); ?>
+	
 		<?php while ( have_posts() ) : the_post(); // Start the Loop. ?>
 			
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -10,6 +10,8 @@
 
 <div class="row">
 	<div class="span9">
+	
+		<?php if ( function_exists('mybread') ) mybread(); ?>
 
 		<?php if ( have_posts() ) : ?>
 

@@ -299,9 +299,163 @@ function origines_footer_count_for_span() {
  * Get the gravatar origines style.
  */
 function origines_get_avatar($email, $size) {
-      $grav_url = "http://www.gravatar.com/avatar/" . 
-         md5(strtolower($email)) . "?s=" . $size;
-      echo "<img src='$grav_url' class='media-object img-polaroid' />";
+	$grav_url = "http://www.gravatar.com/avatar/" . 
+	md5(strtolower($email)) . "?s=" . $size;
+	echo "<img src='$grav_url' class='media-object img-polaroid' />";
+}
+
+/**
+ * Breadcrumb
+ * 
+ * Thanks to Daniel Roche for his nice tutorial here : http://www.seomix.fr/fil-dariane-chemin-navigation/
+ */
+
+//Récupérer les catégories parentes
+function myget_category_parents($id, $link = false, $nicename = false, $visited = array()) {
+  	$chain = '';
+  	$parent = &get_category($id);
+    if (is_wp_error($parent))return $parent;
+    if ($nicename)$name = $parent->name;
+    else $name = $parent->cat_name;
+    if ($parent->parent && ($parent->parent != $parent->term_id ) && !in_array($parent->parent, $visited)) {
+        $visited[] = $parent->parent;
+        $chain .= myget_category_parents( $parent->parent, $link, $nicename, $visited ); 
+    }
+    if ($link) $chain .= '<a href="' . get_category_link( $parent->term_id ) . '" title="' . $parent->cat_name . '">' . $name . '</a>';
+    else $chain .= $name;
+    return $chain;
+}
+
+//Le rendu
+function mybread() {
+	// variables globales
+	global $wp_query; 
+	$ped=get_query_var('paged'); 
+	$rendu = '<div itemprop="breadcrumb"><ul class="breadcrumb">';
+	$separator = '<span class="divider">/</span></li>';  
+	$debutlien = '<li><a title="' . get_bloginfo('name') . '" href="' . home_url() . '">Home</a>' . $separator;
+	$debut = '<li>Home</li>';
+  
+	// si l'utilisateur a défini une page comme page d'accueil
+	if ( is_front_page() ) { $rendu .= $debut; }
+
+	// dans le cas contraire
+	else {
+
+		// on teste si une page a été définie comme devant afficher une liste d'article 
+		if ( get_option('show_on_front') == 'page') {
+			$url = urldecode(substr($_SERVER['REQUEST_URI'], 1));
+			$uri = $_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
+			$posts_page_id = get_option( 'page_for_posts');
+			$posts_page_url = get_page_uri($posts_page_id);  
+			$pos = strpos($uri,$posts_page_url);
+			if($pos !== false) {
+				$rendu .= $debutlien . $oseparator . 'Articles<li>';
+			}
+			else { $rendu .= $debutlien; } 
+		}
+
+		//Si c'est l'accueil
+    	elseif ( is_home() ) { $rendu .= $debut; }
+
+    	//pour tout le reste
+    	else { $rendu .= $debutlien; }
+
+    	// les catégories
+    	if ( is_category() ) {
+			$cat_obj = $wp_query->get_queried_object();
+			$thisCat = $cat_obj->term_id;
+			$thisCat = get_category($thisCat);
+			$parentCat = get_category($thisCat->parent);
+			if ( $thisCat->parent != 0 ) $rendu .= '<li>' . myget_category_parents($parentCat, true, true) . $separator;
+			if ( $thisCat->parent == 0 ) $rendu .= '';
+			if ( $ped <= 1 ) $rendu .= '<li>' . single_cat_title("", false) . '</li>';
+			elseif ( $ped > 1 ) {
+        		$rendu .= '<li><a href="' . get_category_link( $thisCat ) . '" title="' . single_cat_title("", false).'">' . single_cat_title("", false).'</a>' . $separator;
+  	      	}
+   		}
+
+    	// les auteurs
+    	elseif ( is_author() ) {
+    		global $author; 
+    		$user_info = get_userdata($author); 
+    		$rendu .= '<li>' . $user_info->display_name . '</li>';
+    	}  
+
+    	// les mots clés
+    	elseif ( is_tag() ) {
+    		$tag=single_tag_title("",FALSE);
+    		$rendu .= '<li>Tag: ' . $tag . '</li>';
+    	}
+    
+    	elseif ( is_date() ) {
+    		if ( is_day() ) {
+        		global $wp_locale;
+        	    $rendu .= '<li>' . get_the_date() . '</li>';
+        	}
+      		else if ( is_month() ) {
+            	$rendu .= "<li>" . single_month_title(' ',false) . '</li>';
+        	}
+      		else if ( is_year() ) {
+            	$rendu .= "<li>" . get_query_var('year') . '</li>';
+        	}
+    	}
+
+    	//les archives hors catégories
+    	elseif ( is_archive() && !is_category() ) {
+    		$posttype = get_post_type();
+      		$tata = get_post_type_object( $posttype );
+      		$var = '';
+      		$the_tax = get_taxonomy( get_query_var( 'taxonomy' ) );
+      		$titrearchive = $tata->labels->menu_name;
+      		if ( !empty($the_tax) ) { $var = $the_tax->labels->name; }
+          	if ( empty($the_tax) ) { $var = $titrearchive; }
+      		$rendu .= '<li>Archives: "' . $var . '"</li>';
+      	}
+
+    	// La recherche
+    	elseif ( is_search()) {
+      		$rendu .= '<li>Search for: ' . get_search_query() . '</li>';
+    	}
+
+    	// la page 404
+    	elseif ( is_404()){
+      		$rendu .= '<li>Ooops... 404.</li>';
+    	}
+
+    	//Un article
+    	elseif ( is_single() ) {
+      		$category = get_the_category();
+      		$category_id = get_cat_ID( $category[0]->cat_name );
+      		if ($category_id != 0) {
+        		$rendu .= '<li>' . myget_category_parents($category_id,true) . $separator . '<li>' . the_title('','',FALSE) . '</li>';
+        	}
+      		elseif ($category_id == 0) {
+        		$post_type = get_post_type();
+        		$tata = get_post_type_object( $post_type );
+        		$titrearchive = $tata->labels->menu_name;
+        		$urlarchive = get_post_type_archive_link( $post_type );
+        		$rendu .= '<li><a href="' . $urlarchive . '" title="' . $titrearchive . '">' . $titrearchive . $separator . '<li>' . the_title('','',FALSE) . '</li>';
+        	}
+    	}
+
+    	//Une page
+    	elseif ( is_page()) {
+      		$post = $wp_query->get_queried_object();
+      		if ( $post->post_parent == 0 ) { $rendu .= "<li>" . the_title('','',FALSE) . "</li>"; }
+      		elseif ( $post->post_parent != 0 ) {
+        		$title = the_title('','',FALSE);
+        		$ancestors = array_reverse(get_post_ancestors($post->ID));
+        		array_push($ancestors, $post->ID);
+        		foreach ( $ancestors as $ancestor ) {
+          			if ( $ancestor != end($ancestors) ) { $rendu .= '<li><a href="'. get_permalink($ancestor) . '">' . strip_tags( apply_filters( 'single_post_title', get_the_title( $ancestor ) ) ) . '</a>' . $separator ; }
+          			else { $rendu .= '<li>' . strip_tags(apply_filters('single_post_title',get_the_title($ancestor))) . '</li>'; }
+          		}
+        	}
+    	}
+	}
+	$rendu .= '</ul></div> <!-- breadcrumb -->';
+	echo $rendu;
 }
 
 ?>
