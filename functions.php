@@ -305,7 +305,7 @@ function origines_get_avatar($email, $size) {
 }
 
 /**
- * Breadcrumb
+ * Breadcrumbs
  * 
  * Thanks to Daniel Roche for his nice tutorial here : http://www.seomix.fr/fil-dariane-chemin-navigation/
  */
@@ -321,7 +321,7 @@ function myget_category_parents($id, $link = false, $nicename = false, $visited 
         $visited[] = $parent->parent;
         $chain .= myget_category_parents( $parent->parent, $link, $nicename, $visited ); 
     }
-    if ($link) $chain .= '<a href="' . get_category_link( $parent->term_id ) . '" title="' . $parent->cat_name . '">' . $name . '</a>';
+    if ($link) $chain .= '<li><a href="' . get_category_link( $parent->term_id ) . '" title="' . $parent->cat_name . '">' . $name . '</a><span class="divider">/</span></li>';
     else $chain .= $name;
     return $chain;
 }
@@ -367,7 +367,7 @@ function mybread() {
 			$thisCat = $cat_obj->term_id;
 			$thisCat = get_category($thisCat);
 			$parentCat = get_category($thisCat->parent);
-			if ( $thisCat->parent != 0 ) $rendu .= '<li>' . myget_category_parents($parentCat, true, true) . $separator;
+			if ( $thisCat->parent != 0 ) $rendu .= myget_category_parents($parentCat, true, true);
 			if ( $thisCat->parent == 0 ) $rendu .= '';
 			if ( $ped <= 1 ) $rendu .= '<li>' . single_cat_title("", false) . '</li>';
 			elseif ( $ped > 1 ) {
@@ -428,7 +428,7 @@ function mybread() {
       		$category = get_the_category();
       		$category_id = get_cat_ID( $category[0]->cat_name );
       		if ($category_id != 0) {
-        		$rendu .= '<li>' . myget_category_parents($category_id,true) . $separator . '<li>' . the_title('','',FALSE) . '</li>';
+        		$rendu .= myget_category_parents($category_id,true) . '<li>' . the_title('','',FALSE) . '</li>';
         	}
       		elseif ($category_id == 0) {
         		$post_type = get_post_type();
