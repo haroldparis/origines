@@ -15,8 +15,8 @@
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php while ( have_posts() ) : the_post(); // Start the Loop. ?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php while ( have_posts() ) : the_post(); // Start the Loop. ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					
 		<header class="entry-header">
 			<?php the_post_thumbnail(); ?>
@@ -63,9 +63,20 @@
 			<?php endif; ?>
 		</footer><!-- .entry-meta -->
 		<hr />
-	</article><!-- #post -->
+		</article><!-- #post -->
 	
-			<?php endwhile; // end the Loop. ?>
+		<?php endwhile; // end the Loop. ?>
+		
+		<?php if (  $wp_query->max_num_pages > 1 ) : ?>
+		<ul class="pager">
+  			<li class="previous">
+    			<?php next_posts_link( __('<i class="icon-arrow-left"></i> Previous post') ); ?>
+  			</li>
+  			<li class="next">
+    			<?php previous_posts_link( __('Next post <i class="icon-arrow-right"></i>') ); ?>
+  			</li>
+		</ul>
+		<?php endif; ?>
 
 		<?php else : ?>
 
