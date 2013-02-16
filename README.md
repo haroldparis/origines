@@ -18,8 +18,8 @@ Description:
 
 Origines is a WordPress Theme developed with Twitter Bootstrap framework.
 
-Origines is set the be a theme framework for developing child themes.
-It works well as it is, but you may need a little bit styling to add
+Origines is set to become a framework for developing child themes.
+It works well as it is, but you may need a little bit of styling to add
 the perfect touch to your site.
 
 If you like it, feel free to give me a shout on twitter !
