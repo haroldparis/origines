@@ -43,6 +43,10 @@ automatically adjust in width to the content... which I think is cool. ^^
 moment, but I plan to add a second one in the footer for SEO purpose for large sites
 in a clic-to-show box.
 
+The classic template is content + sidebar, but I've created a full-width template
+which doesn't show the sidebar. This can be selected in the model selection in Page's
+Attributes. 
+
 And by the way, if you test it and have any comments or feedbacks to give, feel
 free to do so right here : http://www.tribeleadr.com/contact/ (it's in French but, 
 hey ! That shouldn't be to hard. If so, give me a shout on Twitter: @haroldparis)
