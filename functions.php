@@ -207,7 +207,7 @@ class origines_nav_walker extends Walker_Nav_Menu {
 /**
  * Function Name: origines_entry_meta
  * Description: Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
- * Credits: Twentyten
+ * Credits: TwentyTen WordPress Theme
  */
 function origines_entry_meta() {
 	// Translators: used between list items, there is a space after the comma.
