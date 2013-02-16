@@ -10,7 +10,7 @@
 <?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 	<div id="sidebar" class="widget-area span3" role="complementary">
 		<?php dynamic_sidebar( 'sidebar' ); ?>
-	</div><!-- #secondary -->
+	</div><!-- #sidebar -->
 <?php endif; ?>
 
 </div><!-- .row -->

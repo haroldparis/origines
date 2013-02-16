@@ -48,6 +48,8 @@
     			<?php next_post_link( '%link', 'Next post: <strong>%title</strong> <i class="icon-arrow-right"></i>' ); ?>
   			</li>
 		</ul>
+		
+		<?php comments_template( '', true ); ?>
 	
 		<?php endwhile; // end the Loop. ?>
 		
