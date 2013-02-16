@@ -10,14 +10,14 @@
 			
 		<header class="entry-header page-header">
 			<h1 class="entry-title">
-				<?php printf( __( 'Category: %s', 'origines' ), single_cat_title('', false) ); ?>
+				<?php printf( __( 'Tag: %s', 'origines' ), single_tag_title('', false) ); ?>
 			</h1>
 		</header><!-- .page-header -->
 		
 		<?php 
-		$category_description = category_description();
-		if ( ! empty( $category_description ) )
-		echo '<div class="category-description well"><p>' . $category_description . '</p></div>';
+		$tag_description = tag_description();
+		if ( ! empty( $tag_description ) )
+		echo '<div class="tag-description well"><p>' . $tag_description . '</p></div>';
 		?>
 
 		<?php get_template_part( 'loop' ); ?>
