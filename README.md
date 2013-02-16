@@ -9,7 +9,14 @@ GitHub URI: https://github.com/haroldparis/origines
 
 Origines is a WordPress Theme developed with Twitter Bootstrap framework.
 
-Origines is set the be a framework for developing child themes.
+Origines is set the be a theme framework for developing child themes.
+It works well as it is, but you may need a little bit styling to add
+the perfect touch to your site.
+
+If you like it, feel free to give me a shout on twitter !
+
+Want to participate and help me make it the best WordPress+Bootstrap theme ?
+Source code is available on Github ! https://github.com/haroldparis/origines
 
 Licence:
 This file is part of Origines.
@@ -22,4 +29,4 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
-along with Origines.  If not, see <http://www.gnu.org/licenses/>.
+along with Origines.  If not, see http://www.gnu.org/licenses/.
