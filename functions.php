@@ -671,10 +671,7 @@ function google_analytics_tracking_code(){
 <?php }
 }
 
-// include GA tracking code before the closing head tag
-// add_action('wp_head', 'google_analytics_tracking_code');
-
-// OR include GA tracking code before the closing body tag
+// include GA tracking code before the closing body tag
 add_action('wp_footer', 'google_analytics_tracking_code');
 
 ?>
