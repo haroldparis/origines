@@ -1,6 +1,6 @@
 <?php
 /**
- * Name: Origines
+ * Name: Origines WordPress Theme
  * GitHub URI: https://github.com/haroldparis/origines
  * Description: Origines template for index.
  * Version: 0.2
@@ -8,6 +8,7 @@
  * Twitter: @haroldparis
  * Author website: http://www.tribeleadr.com/
  * Licence:
+ * Copyright 2013 TRIBELEADR
  * This file is part of Origines.
  * Origines is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

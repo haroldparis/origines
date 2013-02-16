@@ -1,5 +1,5 @@
-Origines
-========
+Origines WordPress Theme
+========================
 
 Version: 0.2
 Author: Harold Paris
@@ -19,6 +19,9 @@ Want to participate and help me make it the best WordPress+Bootstrap theme ?
 Source code is available on Github ! https://github.com/haroldparis/origines
 
 Licence:
+
+Copyright 2013 TRIBELEADR
+
 This file is part of Origines.
 Origines is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
