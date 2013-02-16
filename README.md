@@ -47,7 +47,16 @@ in a clic-to-show box.
 
 The classic template is content + sidebar, but I've created a full-width template
 which doesn't show the sidebar. This can be selected in the model selection in Page's
-Attributes. 
+Attributes.
+
+If you want to use the Hero widget to display a... Hero unit. Here is an example 
+of the code you will have to put in a text widget:
+
+	<div id="hero" class="hero-unit">
+		<h1>Heading</h1>
+		<p>Tagline</p>
+		<p><a class="btn btn-primary btn-large">Learn more</a></p>
+	</div><!-- #hero -->
 
 And by the way, if you test it and have any comments or feedbacks to give, feel
 free to do so right here : http://www.tribeleadr.com/contact/ (it's in French but, 
