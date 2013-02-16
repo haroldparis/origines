@@ -1,9 +1,6 @@
 <?php
 /**
- * The sidebar containing the main widget area.
- *
- * If no active widgets in sidebar, let's hide it completely.
- *
+ * The sidebar.
  */
 ?>
 
@@ -12,5 +9,3 @@
 		<?php dynamic_sidebar( 'sidebar' ); ?>
 	</div><!-- #sidebar -->
 <?php endif; ?>
-
-</div><!-- .row -->

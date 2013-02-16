@@ -1,93 +1,20 @@
 <?php get_header(); ?>
 
-<div class="container">
+<div class="container" role="main" itemprop="mainContentOfPage">
 
 <?php origines_home_head(); ?>
 
-<div class="row">
-	<div class="span9">
+<div class="row" >
+	<div class="span9 content">
 	
 		<?php if ( function_exists('mybread') ) mybread(); ?>
 
-		<?php if ( have_posts() ) : ?>
+		<?php get_template_part( 'loop' ); ?>
+		
+	</div><!-- .span9 -->
 
-		<?php while ( have_posts() ) : the_post(); // Start the Loop. ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					
-		<header class="entry-header">
-			<?php the_post_thumbnail(); ?>
-			<?php if ( is_single() ) : ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php else : ?>
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-			</h1>
-			<?php endif; // is_single() ?>
-		</header><!-- .entry-header -->
-
-		<?php if ( is_search() ) : // Only display Excerpts for Search. ?>
-		
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
-		
-		<?php else : ?>
-		
-		<div class="entry-content clearfix">
-			<?php the_content( __( '<p><button class="btn"><i class="icon-plus-sign"></i> Continue reading...</button></p>', 'origines' ) ); ?>
-		</div><!-- .entry-content -->
-		
-		<?php endif; ?>
-
-		<footer class="entry-meta">
-			<p><small><?php origines_entry_meta(); ?></small></p>
-			<?php if ( is_singular() && get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries. ?>
-				<div class="author-info well media">
-					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" alt="<?php the_author(); ?>" id="author-avatar" class="pull-left">
-						<?php origines_get_avatar( get_the_author_meta( 'user_email' ), 96); ?>
-					</a>
-					<div class="author-description media-body">
-						<h4 class="media-heading"><?php printf( __( 'About %s', 'origines' ), get_the_author() ); ?></h4>
-						<p><?php the_author_meta( 'description' ); ?></p>
-						<div class="author-link">
-							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-								<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'origines' ), get_the_author() ); ?>
-							</a>
-						</div><!-- .author-link	-->
-					</div><!-- .author-description -->
-				</div><!-- .author-info -->
-			<?php endif; ?>
-		</footer><!-- .entry-meta -->
-		<hr />
-		</article><!-- #post -->
+	<?php get_sidebar(); ?>
 	
-		<?php endwhile; // end the Loop. ?>
-		
-		<?php if (  $wp_query->max_num_pages > 1 ) : ?>
-		<ul class="pager">
-  			<li class="previous">
-    			<?php next_posts_link( __('<i class="icon-arrow-left"></i> Previous post') ); ?>
-  			</li>
-  			<li class="next">
-    			<?php previous_posts_link( __('Next post <i class="icon-arrow-right"></i>') ); ?>
-  			</li>
-		</ul>
-		<?php endif; ?>
-
-		<?php else : ?>
-
-			<article id="post-0" class="post no-results not-found">
-
-				<div class="entry-content">
-					<p>Apologies, but no results were found.</p>
-				</div><!-- .entry-content -->
-
-			</article><!-- #post-0 -->
-
-		<?php endif; // end have_posts() check. ?>
-		
-</div><!-- .span8 -->
-
-<?php get_sidebar(); ?>
+</div><!-- .row -->
 
 <?php get_footer(); ?>
