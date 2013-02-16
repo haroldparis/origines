@@ -11,6 +11,8 @@ Author URI: http://www.tribeleadr.com/
 
 GitHub URI: https://github.com/haroldparis/origines
 
+Demo: http://www.trbldr.fr/origines/
+
 WordPress Theme Package (v0.2) : http://www.tribeleadr.com/origines.zip
 
 Description:
