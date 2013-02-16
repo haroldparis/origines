@@ -1,10 +1,29 @@
 <?php
 /**
- * Origines functions and definitions.
+ * Name: Origines
+ * GitHub URI: https://github.com/haroldparis/origines
+ * Description: Origines functions and definitions.
+ * Version: 0.2
+ * Author: Harold Paris
+ * Twitter: @haroldparis
+ * Author website: http://www.tribeleadr.com/
+ * Licence:
+ * This file is part of Origines.
+ * Origines is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * Origines is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with Origines.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /**
- * Registers our widget areas.
+ * Function Name: origines_widgets_init
+ * Description: Registers our widget areas.
  */
 function origines_widgets_init() {
 	register_sidebar( array(
@@ -71,7 +90,8 @@ function origines_widgets_init() {
 add_action( 'widgets_init', 'origines_widgets_init' );
 
 /**
- * Registers our menus.
+ * Function Name: origines_menu_init
+ * Description: Registers our menus.
  */
 function origines_menu_init() {
 	register_nav_menus(
@@ -85,41 +105,15 @@ function origines_menu_init() {
 add_action( 'init', 'origines_menu_init' );
 
 /**
- * Change the way menus are built so it will be adapted to Bootstrap.
+ * Class Name: origines_nav_walker
+ * Description: Change the way menus are built so it will be adapted to Bootstrap.
+ * Credits: Thanks to Edward McIntyre - @twittem
  */
-/**
- * Class Name: twitter_bootstrap_nav_walker
- * GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
- * Description: A custom Wordpress nav walker to implement the Twitter Bootstrap 2 (https://github.com/twitter/bootstrap/) dropdown navigation using the Wordpress built in menu manager.
- * Version: 1.2.2
- * Author: Edward McIntyre - @twittem
- * Licence: WTFPL 2.0 (http://sam.zoy.org/wtfpl/COPYING)
- */
-
-class twitter_bootstrap_nav_walker extends Walker_Nav_Menu {
-
-	/**
-	 * @see Walker::start_lvl()
-	 * @since 3.0.0
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param int $depth Depth of page. Used for padding.
-	 */
+class origines_nav_walker extends Walker_Nav_Menu {
 	function start_lvl( &$output, $depth ) {
 		$indent = str_repeat( "\t", $depth );
 		$output	   .= "\n$indent<ul class=\"dropdown-menu\">\n";		
 	}
-
-	/**
-	 * @see Walker::start_el()
-	 * @since 3.0.0
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param object $item Menu item data object.
-	 * @param int $depth Depth of menu item. Used for padding.
-	 * @param int $current_page Menu item ID.
-	 * @param object $args
-	 */
 
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		global $wp_query;
@@ -162,28 +156,6 @@ class twitter_bootstrap_nav_walker extends Walker_Nav_Menu {
 			$output .= $indent . '<li class="divider">';
 		}
 	}
-
-
-	/**
-	 * Traverse elements to create list from elements.
-	 *
-	 * Display one element if the element doesn't have any children otherwise,
-	 * display the element and its children. Will only traverse up to the max
-	 * depth and no ignore elements under that depth. 
-	 *
-	 * This method shouldn't be called directly, use the walk() method instead.
-	 *
-	 * @see Walker::start_el()
-	 * @since 2.5.0
-	 *
-	 * @param object $element Data object
-	 * @param array $children_elements List of elements to continue traversing.
-	 * @param int $max_depth Max depth to traverse.
-	 * @param int $depth Depth of current element.
-	 * @param array $args
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @return null Null on failure with no changes to parameters.
-	 */
 
 	function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
 
@@ -232,7 +204,9 @@ class twitter_bootstrap_nav_walker extends Walker_Nav_Menu {
 }
 
 /**
- * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
+ * Function Name: origines_entry_meta
+ * Description: Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
+ * Credits: Twentyten
  */
 function origines_entry_meta() {
 	// Translators: used between list items, there is a space after the comma.
@@ -273,7 +247,8 @@ function origines_entry_meta() {
 }
 
 /**
- * Check the number of active footer widgets and returns an integer for styling purpose.
+ * Function Name: origines_footer_count_for_span
+ * Description: Check the number of active footer widgets and returns an integer for styling purpose.
  */
 function origines_footer_count_for_span() {
 	// Count active sidebars.
@@ -296,7 +271,8 @@ function origines_footer_count_for_span() {
 }
 
 /**
- * Get the gravatar origines style.
+ * Function Name: origines_get_avatar
+ * Description: Get the gravatar Origines style.
  */
 function origines_get_avatar($email, $size) {
 	$grav_url = "http://www.gravatar.com/avatar/" . 
@@ -305,9 +281,9 @@ function origines_get_avatar($email, $size) {
 }
 
 /**
- * Breadcrumbs
- * 
- * Thanks to Daniel Roche for his nice tutorial here : http://www.seomix.fr/fil-dariane-chemin-navigation/
+ * Name: origines_breadcrumbs
+ * Description: Get the breadcrumbs Origines style.
+ * Credits: Thanks to Daniel Roche for his nice tutorial here : http://www.seomix.fr/fil-dariane-chemin-navigation/
  */
 
 //Récupérer les catégories parentes
@@ -459,11 +435,10 @@ function mybread() {
 }
 
 /**
- * Change the way comments are built so it will be adapted to Bootstrap.
- * 
- * Thanks to bitacre and his nice tutorial here : http://shinraholdings.com/621/custom-walker-to-extend-the-walker_comment-class/
+ * Class Name: origines_walker_comment
+ * Description: Change the way comments are built so it will be adapted to Bootstrap.
+ * Credits: Thanks to bitacre and his nice tutorial here : http://shinraholdings.com/621/custom-walker-to-extend-the-walker_comment-class/
  */
-
 class origines_walker_comment extends Walker_Comment {
      
     // init classwide variables
@@ -556,19 +531,18 @@ class origines_walker_comment extends Walker_Comment {
 }
 
 /**
- * Add the button class from bootstrap to comment replies.
+ * Function Name: origine_reply_link
+ * Description: Add the button class from Bootstrap to comment replies.
  */
-
 function origine_reply_link($link, $args, $comment, $post){
   return str_replace("class='comment-reply-link'", "class='comment-reply-link btn btn-mini'", $link);
 }
-
 add_filter('comment_reply_link', 'origine_reply_link', 420, 4);
 
 /**
- * Custom comment form for bootstrap.
+ * Function Name: origines_comment_form
+ * Description: Custom comment form for bootstrap.
  */
-
 function origines_comment_form( $args = array(), $post_id = null ) {
 	global $id;
 
@@ -653,10 +627,11 @@ function origines_comment_form( $args = array(), $post_id = null ) {
 	<?php
 }
 
-/**
- * Origines home head.
- */
 
+/**
+ * Function Name: origines_home_head
+ * Description: Origines home head.
+ */
 function origines_home_head() {
 	// check if hero unit is active and display it
 	if ( is_active_sidebar( 'hero' ) ) : dynamic_sidebar( 'hero' ); 
