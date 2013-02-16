@@ -16,3 +16,6 @@ body {
   	margin-right: 10px;
 }
 
+body.admin-bar .navbar-fixed-top{ 
+	top: 28px; 
+}
