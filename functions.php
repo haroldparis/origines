@@ -653,4 +653,19 @@ function origines_comment_form( $args = array(), $post_id = null ) {
 	<?php
 }
 
+/**
+ * Origines home head.
+ */
+
+function origines_home_head() {
+	// check if hero unit is active and display it
+	if ( is_active_sidebar( 'hero' ) ) : dynamic_sidebar( 'hero' ); 
+	// or display the homepage header
+	else : ?>
+	<div class="page-header">
+		<h1 id="title"><?php bloginfo( 'name' ); ?> <span id="description"><small><?php bloginfo( 'description' ); ?></small></span></h1>
+	</div> <?php
+	endif;
+}
+
 ?>

@@ -2,11 +2,7 @@
 
 <div class="container">
 
-<?php if ( is_active_sidebar( 'hero' ) ) : ?>
-	<div id="hero" class="widget-area hero-unit">
-		<?php dynamic_sidebar( 'hero' ); ?>
-	</div><!-- #hero -->
-<?php endif; ?>
+<?php origines_home_head(); ?>
 
 <div class="row">
 	<div class="span9">
