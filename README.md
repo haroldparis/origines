@@ -64,8 +64,8 @@ Google Analytics code can be found directly in the function.php file. In order t
 configure it, you need to update the $propertyID variable "UA-XXX" with your GA Property ID.
 
 And by the way, if you test it and have any comments or feedbacks to give, feel
-free to do so right here : http://www.tribeleadr.com/contact/ (it's in French but, 
-hey ! That shouldn't be to hard. If so, give me a shout on Twitter: @haroldparis)
+free to do so right here : https://github.com/haroldparis/origines/issues
+(Or if you prefer, give me a shout on Twitter: @haroldparis)
 
 What may interest you:
 ----------------------
