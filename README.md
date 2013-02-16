@@ -60,6 +60,9 @@ of the code you will have to put in a text widget:
 		<p><a class="btn btn-primary btn-large">Learn more</a></p>
 	</div><!-- #hero -->
 
+Google Analytics code can be found directly in the function.php file. In order to
+configure it, you need to update the $propertyID variable "UA-XXX" with your GA Property ID.
+
 And by the way, if you test it and have any comments or feedbacks to give, feel
 free to do so right here : http://www.tribeleadr.com/contact/ (it's in French but, 
 hey ! That shouldn't be to hard. If so, give me a shout on Twitter: @haroldparis)
