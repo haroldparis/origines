@@ -64,7 +64,7 @@
 		<p><small>Copyright &copy; <?php $the_year = date("Y"); echo $the_year; ?> <a href="<?php bloginfo('url');?>"><?php bloginfo('name'); ?></a> All Rights Reserved.</small></p>
 	</div>
 	<div id="Links" class="pull-right">
-		<p><small>Proudly Powered by <a href="http://wordpress.org/" title="WordPress">WordPress</a> and <a href="#" title="Themes WordPress">Origines</a> - Design by <a href="http://www.tribeleadr.com/" title="Agence Social Media et Web à Orléans">TRIBELEADR</a></small></p>
+		<p><small>Proudly Powered by <a href="http://wordpress.org/" title="WordPress">WordPress</a> and <a href="https://github.com/haroldparis/origines/" title="Themes WordPress">Origines</a> - Design by <a href="http://www.tribeleadr.com/" title="Agence Social Media et Web à Orléans">TRIBELEADR</a></small></p>
 	</div>
 </footer>
 
