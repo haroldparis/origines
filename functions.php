@@ -649,8 +649,9 @@ function origines_home_head() {
  * Description: Add Google Analytics Tracking Code to the head or the footer of your blog.
  */
 function google_analytics_tracking_code(){
-	$propertyID = 'UA-XXX'; // GA Property ID
-	?>
+	$propertyID = 'UA-XXX'; // Replace 'UA-XXX' with GA Property ID
+	if ($propertyID != 'UA-XXX') {
+		?>
 
 		<script type="text/javascript">
 
@@ -666,10 +667,24 @@ function google_analytics_tracking_code(){
 
 		</script>
 		
-	<?php
+		<?php
+	}
 }
 
 // include GA tracking code before the closing body tag
 add_action('wp_footer', 'google_analytics_tracking_code');
+
+function origines_logo(){
+	$logofile = "origines-30.png"; // Replace "" with "nameofthelogo.png" which must be in the theme img directory - max 30px height
+	if ( $logofile == "" ) {
+	?>
+		<a class="brand" href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'description' ); ?>"><?php bloginfo( 'name' ); ?></a>
+	<?php
+	} else {
+	?>
+		<a class="brand" style="padding: 5px 20px 5px;" href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'description' ); ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/img/<?php echo $logofile; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+	<?php
+	}
+}
 
 ?>

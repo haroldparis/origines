@@ -68,7 +68,7 @@
         	<span class="icon-bar"></span>
         	<span class="icon-bar"></span>
         	</button>
-        	<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+        	<?php origines_logo(); ?>
         	<?php wp_nav_menu( array( 'menu' => 'Header Menu', 'container' => div, 'container_class' => 'nav-collapse collapse', 'menu_class' => 'nav', 'walker' => new origines_nav_walker() )); ?>
         	<?php get_search_form(); ?>
     	</div>
