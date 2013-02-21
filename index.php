@@ -31,8 +31,6 @@
 
 <div class="row" >
 	<div class="span9 content">
-	
-		<?php if ( function_exists('mybread') ) mybread(); ?>
 
 		<?php get_template_part( 'loop' ); ?>
 		
