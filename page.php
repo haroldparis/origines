@@ -28,7 +28,7 @@
 <div class="container">
 
 <div class="row" >
-	<div class="span9 content" role="main" itemprop="mainContentOfPage">
+	<div class="span9 content">
 
 		<?php if ( function_exists('mybread') ) mybread(); ?>
 	
