@@ -308,9 +308,9 @@ function mybread() {
 	// variables globales
 	global $wp_query; 
 	$ped=get_query_var('paged'); 
-	$rendu = '<div itemprop="breadcrumb"><ul class="breadcrumb">';
+	$rendu = '<div id="breadcrumbs" itemprop="breadcrumb"><ul class="breadcrumb">';
 	$separator = '<span class="divider">/</span></li>';  
-	$debutlien = '<li><a title="' . get_bloginfo('name') . '" href="' . home_url() . '">Home</a>' . $separator;
+	$debutlien = '<li><a rel="home" title="' . get_bloginfo('name') . '" href="' . home_url() . '">Home</a>' . $separator;
 	$debut = '<li>Home</li>';
   
 	// si l'utilisateur a défini une page comme page d'accueil
