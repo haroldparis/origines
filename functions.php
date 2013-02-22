@@ -671,9 +671,8 @@ function origines_ga_tracking(){
 // include GA tracking code before the closing body tag
 add_action('wp_footer', 'origines_ga_tracking');
 
-function origines_logo(){
-	$logofile = "origines-30.png"; // Replace "" with "nameofthelogo.png" which must be in the theme img directory - max 30px height
-	if ( $logofile == "" ) {
+function origines_logo($logofile){
+	if ( $logofile == "yourfilename.png" ) {
 	?>
 		<a class="brand" href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'description' ); ?>"><?php bloginfo( 'name' ); ?></a>
 	<?php
