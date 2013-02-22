@@ -29,9 +29,9 @@
 			
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					
-			<header class="entry-header page-header">
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</header><!-- .page-header -->
+			<header class="o-header page-header">
+				<h1 class="o-title"><?php the_title(); ?></h1>
+			</header><!-- /.o-header -->
 		
 			<div class="entry-content clearfix">
 				<?php the_content(); ?>

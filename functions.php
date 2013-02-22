@@ -31,19 +31,19 @@ function origines_widgets_init() {
 		'name' => __( 'Hero', 'origines' ),
 		'id' => 'hero',
 		'description' => __( 'Appears on the homepage in a Bootstrap Hero Unit. Use text component.', 'origines' ),
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
+		'before_widget' => '<div class="o-widget o-hero-widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<header class="o-widget-title o-hero-widget-title entry-header page-header"><h1 class="entry-title">',
+		'after_title' => '</h1></header>',
 	) );
 
 	register_sidebar( array(
 		'name' => __( 'Sidebar', 'origines' ),
 		'id' => 'sidebar',
 		'description' => __( 'Appears on posts and pages except if full-width template is selected.', 'origines' ),
-		'before_widget' => '<aside class="widget">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
+		'before_widget' => '<div class="o-widget o-sidebar-widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="o-widget-title o-sidebar-widget-title">',
 		'after_title' => '</h3>',
 	) );
 	
@@ -51,9 +51,9 @@ function origines_widgets_init() {
 		'name' => __( 'Footer 1', 'origines' ),
 		'id' => 'footer1',
 		'description' => __( 'Appears on posts and pages on the left side of the footer.', 'origines' ),
-		'before_widget' => '<div class="widget">',
+		'before_widget' => '<div class="o-widget o-footer-widget">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
+		'before_title' => '<h3 class="o-widget-title o-footer-widget-title">',
 		'after_title' => '</h3>',
 	) );
 	
@@ -62,9 +62,9 @@ function origines_widgets_init() {
 		'id' => 'footer2',
 		'class' => 'footer-widget',
 		'description' => __( 'Appears on posts and pages on the center of the footer.', 'origines' ),
-		'before_widget' => '<div class="widget">',
+		'before_widget' => '<div class="o-widget o-footer-widget">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
+		'before_title' => '<h3 class="o-widget-title o-footer-widget-title">',
 		'after_title' => '</h3>',
 	) );
 	
@@ -72,9 +72,9 @@ function origines_widgets_init() {
 		'name' => __( 'Footer 3', 'origines' ),
 		'id' => 'footer3',
 		'description' => __( 'Appears on posts and pages on the right side of the footer.', 'origines' ),
-		'before_widget' => '<div class="widget">',
+		'before_widget' => '<div class="o-widget o-footer-widget">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
+		'before_title' => '<h3 class="o-widget-title o-footer-widget-title">',
 		'after_title' => '</h3>',
 	) );
 	
@@ -82,9 +82,9 @@ function origines_widgets_init() {
 		'name' => __( 'Footer 4', 'origines' ),
 		'id' => 'footer4',
 		'description' => __( 'Appears on posts and pages on the right side of the footer.', 'origines' ),
-		'before_widget' => '<div class="widget">',
+		'before_widget' => '<div class="o-widget o-footer-widget">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
+		'before_title' => '<h3 class="o-widget-title o-footer-widget-title">',
 		'after_title' => '</h3>',
 	) );
 }
@@ -94,13 +94,13 @@ add_action( 'widgets_init', 'origines_widgets_init' );
  * Function Name: origines_menu_init
  * Description: Registers our menus.
  */
-function origines_menu_init() {
+function origines_menus_init() {
 	register_nav_menus( array(
 		'header-menu' => __( 'Header Menu', 'origines' ),
 		'footer-menu' => __( 'Footer Menu', 'origines' )
 	) );
 }
-add_action( 'init', 'origines_menu_init' );
+add_action( 'init', 'origines_menus_init' );
 
 /**
  * Class Name: origines_nav_walker
@@ -635,9 +635,9 @@ function origines_home_head() {
 	if ( is_active_sidebar( 'hero' ) ) : dynamic_sidebar( 'hero' ); 
 	// or display the homepage header
 	else : ?>
-	<div class="page-header">
-		<h1 id="title"><?php bloginfo( 'name' ); ?> <span id="description"><small><?php bloginfo( 'description' ); ?></small></span></h1>
-	</div> <?php
+	<header class="page-header">
+		<h1 class="o-title"><?php bloginfo( 'name' ); ?> <span class="o-title-span"><small><?php bloginfo( 'description' ); ?></small></span></h1>
+	</header> <?php
 	endif;
 }
 
