@@ -25,37 +25,40 @@
 ?>
 <html lang="<?php bloginfo( 'language' ); ?>">
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<title><?php wp_title(''); ?></title>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
 
-<!-- le Google Chrome frame for IE -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title><?php wp_title(''); ?></title>
 
-<!-- le Mobile meta -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- le Google Chrome frame for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<!-- le Favicon & mobile icons -->
-<link rel="apple-touch-icon" href="<?php bloginfo( 'template_directory' ); ?>/img/apple-icon-touch.png">
-<link rel="icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.png">
-<!--[if IE]>
-<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.ico">
-<![endif]-->
-<meta name="msapplication-TileColor" content="#EEEEEE">
-<meta name="msapplication-TileImage" content="<?php bloginfo( 'template_directory' ); ?>/img/win8-tile-icon.png">
+    <!-- le Mobile meta -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- le CSS -->
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<!--[if lt IE 9]>
-<script src="<?php bloginfo( 'template_directory' ); ?>/js/html5shiv.js" type="text/javascript"></script>
-<![endif]-->
+    <!-- le Favicon & mobile icons -->
+    <link rel="apple-touch-icon" href="<?php bloginfo( 'template_directory' ); ?>/img/apple-icon-touch.png">
+    <link rel="icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.png">
+    <!--[if IE]>
+    <link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.ico">
+    <![endif]-->
+    <meta name="msapplication-TileColor" content="#EEEEEE">
+    <meta name="msapplication-TileImage" content="<?php bloginfo( 'template_directory' ); ?>/img/win8-tile-icon.png">
 
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <!-- le CSS -->
+    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+    <!--[if lt IE 9]>
+    <script src="<?php bloginfo( 'template_directory' ); ?>/js/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
 
-<!-- le WordPress head functions -->
-<?php wp_head(); ?>
-<!-- /le WordPress head functions -->
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+    <!-- le WordPress head functions -->
+    <?php wp_head(); ?>
+
+    <!-- le GA tracking code _ add your tracking code in functions.php -->
+    <?php if (function_exists('origines_ga_tracking')) origines_ga_tracking(); ?>
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">

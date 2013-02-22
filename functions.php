@@ -648,7 +648,7 @@ function origines_home_head() {
  * Function Name: google_analytics_tracking_code
  * Description: Add Google Analytics Tracking Code to the head or the footer of your blog.
  */
-function google_analytics_tracking_code(){
+function origines_ga_tracking(){
 	$propertyID = 'UA-XXX'; // Replace 'UA-XXX' with GA Property ID
 	if ($propertyID != 'UA-XXX') {
 		?>
