@@ -57,7 +57,7 @@
     <!-- le WordPress head functions -->
     <?php wp_head(); ?>
 
-    <!-- le GA tracking code _ add your tracking code in functions.php -->
+    <!-- le GA tracking code -->
     <?php if (function_exists('origines_ga_tracking')) origines_ga_tracking(); ?>
 </head>
 
