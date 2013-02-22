@@ -95,13 +95,10 @@ add_action( 'widgets_init', 'origines_widgets_init' );
  * Description: Registers our menus.
  */
 function origines_menu_init() {
-	register_nav_menus(
-		array( 'header-menu' => __( 'Header Menu' ) )
-	);
-	
-	register_nav_menus(
-		array( 'footer-menu' => __( 'Footer Menu' ) )
-	);
+	register_nav_menus( array(
+		'header-menu' => __( 'Header Menu', 'origines' ),
+		'footer-menu' => __( 'Footer Menu', 'origines' )
+	) );
 }
 add_action( 'init', 'origines_menu_init' );
 
