@@ -56,24 +56,23 @@
 
     <!-- le WordPress head functions -->
     <?php wp_head(); ?>
-
-    <!-- le GA tracking code -->
-    <?php if (function_exists('origines_ga_tracking')) origines_ga_tracking(); ?>
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-<div class="navbar navbar-fixed-top">
-	<div class="navbar-inner">
-    	<div class="container">
-        	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-        	</button>
-        	<?php origines_logo(); ?>
-        	<?php wp_nav_menu( array( 'menu' => 'Header Menu', 'container' => div, 'container_class' => 'nav-collapse collapse', 'menu_class' => 'nav', 'walker' => new origines_nav_walker() )); ?>
-        	<?php get_search_form(); ?>
-    	</div>
+<div id="">
+    <div class="navbar navbar-fixed-top">
+    	<div class="navbar-inner">
+        	<div class="container">
+            	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	</button>
+            	<?php if (function_exists('origines_logo')) origines_logo(); ?>
+            	<?php wp_nav_menu( array( 'menu' => 'Header Menu', 'container' => div, 'container_class' => 'nav-collapse collapse', 'menu_class' => 'nav', 'walker' => new origines_nav_walker() )); ?>
+            	<?php get_search_form(); ?>
+        	</div>
+        </div>
     </div>
 </div>
