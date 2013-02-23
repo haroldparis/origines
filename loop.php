@@ -17,7 +17,9 @@
 
 			<header class="o-title-header">
 				<h2 class="o-title">
-					<a class="o-title-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_title(); ?></a>
+					<a class="o-title-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>">
+						<?php the_title(); ?>
+					</a>
 				</h2> <!-- /.o-title -->
 			</header> <!-- /.o-title-header -->
 
@@ -30,6 +32,10 @@
 			<?php else : ?>
 		
 			<div class="o-entry-content">
+
+				<a class="o-thumbnail-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>">
+					<?php the_post_thumbnail('thumbnail', array('class' => 'o-thumbnail')); ?>
+				</a>
 
 				<?php the_content( __( '<p><button class="btn btn-small"><i class="icon-plus-sign"></i> Read more...</button></p>', 'origines' ) ); ?>
 			

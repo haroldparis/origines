@@ -9,6 +9,16 @@
  */
 
 /**
+ * Description: Adding theme support for thumbnails.
+ */
+add_theme_support( 'post-thumbnails' );
+update_option('thumbnail_size_w', 870);
+update_option('thumbnail_size_h', 250);
+update_option('thumbnail_crop', 1);
+update_option('large_size_w', 870);
+update_option('medium_size_w', 500);
+
+/**
  * Function Name: origines_widgets_init
  * Description: Registers our widget areas.
  */
