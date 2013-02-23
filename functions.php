@@ -10,7 +10,6 @@
 
 require_once('includes/origines-init.php');
 require_once('includes/origines-walker.php');
-require_once('includes/origines-comments.php');
 require_once('includes/origines-entry-meta.php');
 
 /**
