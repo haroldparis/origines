@@ -27,7 +27,7 @@
 
 			</div> <!-- /#o-content -->
 
-			<p class="aligncenter">
+			<p class="o-portfolio-element-meta aligncenter">
 
 				<?php 
 				$portfolio_url_value = get_post_meta($post->ID, '_portfolio_url', true);
