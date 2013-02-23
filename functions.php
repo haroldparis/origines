@@ -275,7 +275,7 @@ function origines_footer_count_for_span() {
 function origines_get_avatar($email, $size) {
 	$grav_url = "http://www.gravatar.com/avatar/" . 
 	md5(strtolower($email)) . "?s=" . $size;
-	echo "<img src='$grav_url' class='media-object img-polaroid' />";
+	echo "<img src='$grav_url' class='o-author-avatar img-polaroid' />";
 }
 
 /**
@@ -635,9 +635,11 @@ function origines_home_head() {
 	if ( is_active_sidebar( 'hero' ) ) : dynamic_sidebar( 'hero' ); 
 	// or display the homepage header
 	else : ?>
-	<header class="page-header">
-		<h1 class="o-title"><?php bloginfo( 'name' ); ?> <span class="o-title-span"><small><?php bloginfo( 'description' ); ?></small></span></h1>
-	</header> <?php
+	<header id="o-title-header" class="page-header">
+		<h1 id="o-title">
+			<?php bloginfo( 'name' ); ?> <span class="o-title-span"><small><?php bloginfo( 'description' ); ?></small></span>
+		</h1> <!-- /#o-title -->
+	</header> <!-- /#o-title-header --> <?php
 	endif;
 }
 

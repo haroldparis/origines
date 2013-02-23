@@ -29,14 +29,13 @@
 
 <div class="row">
 
-	<div id="o-content" class="span9">
+	<div id="o-main" class="span9">
 	
 		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
 	
 		<?php
 		/* Queue the first post, that way we know
 		 * what author we're dealing with (if that is the case).
-		 *
 		 * We reset this later so we can run the loop
 		 * properly with a call to rewind_posts().
 		 */
@@ -44,28 +43,32 @@
 		the_post();
 		?>
 			
-		<header class="entry-header page-header">
-			<h1 class="entry-title">
-				<?php printf( __( 'Author: %s', 'origines' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?>
-			</h1>
-		</header><!-- .page-header -->
+		<header id="o-title-header" class="page-header">
+			<h1 id="o-title">
+				<?php printf( __( 'All posts by %s', 'origines' ), get_the_author() ); ?>
+			</h1> <!-- /#o-title -->
+		</header> <!-- /#o-title-header -->
 		
-		<?php if ( get_the_author_meta( 'description' ) ) : ?>
+		<div id="o-content" itemprop="MainContentofPage">
+
+			<?php if ( get_the_author_meta( 'description' ) ) : ?>
 			
-			<div class="author-info well media">
-				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" alt="<?php the_author(); ?>" id="author-avatar" class="pull-left">
+			<div id="o-author-info" class="well media">
+				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" alt="<?php the_author(); ?>" id="o-author-avatar-link" class="pull-left">
 					<?php origines_get_avatar( get_the_author_meta( 'user_email' ), 96); ?>
 				</a>
-				<div class="author-description media-body">
-					<h4 class="media-heading"><?php printf( __( 'About %s', 'origines' ), get_the_author() ); ?></h4>
+				<div id="o-author-description" class="media-body">
+					<h4 id="o-author-description-title" class="media-heading">
+						<?php printf( __( 'About %s', 'origines' ), get_the_author() ); ?>
+					</h4> <!-- /#o-author-description-title -->
 					<p><?php the_author_meta( 'description' ); ?></p>
-				</div><!-- .author-description -->
-			</div><!-- .author-info -->
+				</div> <!-- /#o-author-description -->
+			</div> <!-- /#o-author-info -->
 			
 			<br>
 		
 		<?php endif; ?>
-		
+			
 		<?php
 		/* Since we called the_post() above, we need to
 		 * rewind the loop back to the beginning that way
@@ -75,12 +78,14 @@
 		endif;
 		?>
 
-		<?php get_template_part( 'loop' ); ?>
+			<?php get_template_part( 'loop' ); ?>
+
+		</div> <!-- /#o-content -->
 		
-	</div><!-- /#o-content -->
+	</div> <!-- /#o-main -->
 
 	<?php get_sidebar(); ?>
 	
-</div><!-- /#o-wrapper -->
+</div> <!-- /#o-wrapper -->
 
 <?php get_footer(); ?>

@@ -29,25 +29,29 @@
 
 <div class="row">
 
-	<div id="o-content" class="span9">
+	<div id="o-main" class="span9">
 	
 		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
-			
-		<header class="entry-header page-header">
-			<h1 class="entry-title">
-				<?php printf( __( 'Category: %s', 'origines' ), single_cat_title('', false) ); ?>
-			</h1>
-		</header><!-- .page-header -->
-		
-		<?php 
-		$category_description = category_description();
-		if ( ! empty( $category_description ) )
-		echo '<div class="category-description well"><p>' . $category_description . '</p></div><br>';
-		?>
 
-		<?php get_template_part( 'loop' ); ?>
+		<header id="o-title-header" class="page-header">
+			<h1 id="o-title">
+				<?php printf( __( 'All posts in %s', 'origines' ), single_cat_title('', false) ); ?>
+			</h1> <!-- /#o-title -->
+		</header> <!-- /#o-title-header -->
+
+		<div id="o-content" itemprop="MainContentofPage">
 		
-	</div><!-- /#o-content -->
+			<?php 
+			$category_description = category_description();
+			if ( ! empty( $category_description ) )
+			echo '<div id="o-category-description" class="well"><p>' . $category_description . '</p></div><br>';
+			?>
+
+			<?php get_template_part( 'loop' ); ?>
+
+		</div> <!-- /#o-content -->
+		
+	</div><!-- /#o-main -->
 
 	<?php get_sidebar(); ?>
 	

@@ -29,13 +29,13 @@
 
 <div class="row">
 	
-	<div id="o-content" class="span9">
+	<div id="o-main" class="span9">
 
 		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
 	
 		<?php get_template_part( 'loop', 'page' ); ?>
 		
-	</div><!-- /#o-content -->
+	</div><!-- /#o-main -->
 
 	<?php get_sidebar(); ?>
 	
