@@ -107,4 +107,13 @@ function origines_ga_tracking(){
 }
 add_action('wp_footer', 'origines_ga_tracking');
 
+/**
+ * Function Name: remove_more_jump
+ * Description: Remove the #more in the more button link.
+ */
+function remove_more_jump( $link ) { 
+	return preg_replace( '/#more\-\d+/', '', $link );
+}
+add_filter( 'the_content_more_link', 'remove_more_jump' );
+
 ?>
