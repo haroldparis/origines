@@ -28,7 +28,15 @@
 			</div> <!-- /#o-content -->
 
 			<p class="aligncenter">
-				<a class="o-portfolio-element-url-link btn" href="<?php bloginfo( 'url' ); ?>"><i class="icon-home"></i> <?php _e( 'Back to home...', 'origines' ); ?></a>
+
+				<?php 
+				$portfolio_url_value = get_post_meta($post->ID, '_portfolio_url', true);
+				// check if the custom field has a value
+				if( $portfolio_url_value != '' ): ?>
+				 	<a class="o-portfolio-element-url-link btn" href="<?php echo $portfolio_url_value; ?>"><i class="icon-plus-sign"></i> <?php _e( 'Review more projects...', 'origines' ); ?></a>
+				<?php
+				endif;
+				?>
 
 				<?php 
 				$url_value = get_post_meta($post->ID, '_url', true);

@@ -191,9 +191,14 @@ function portfolio_meta_setup()
  	 
 	?>
 		<div class="portfolio_meta_control">
-			<label>URL</label>
+			<label>Live Demo URL</label>
 			<p>
 				<input type="text" name="_url" value="<?php echo get_post_meta($post->ID,'_url',TRUE); ?>" style="width: 100%;" />
+			</p>
+
+			<label>Portfolio URL</label>
+			<p>
+				<input type="text" name="_portfolio_url" value="<?php echo get_post_meta($post->ID,'_portfolio_url',TRUE); ?>" style="width: 100%;" />
 			</p>
 		</div>
 	<?php
@@ -229,6 +234,14 @@ function portfolio_meta_save($post_id)
 	} else 
 	{
 		delete_post_meta($post_id, '_url');
+	}
+
+	if(isset($_POST['_portfolio_url'])) 
+	{
+		update_post_meta($post_id, '_portfolio_url', $_POST['_portfolio_url']);
+	} else 
+	{
+		delete_post_meta($post_id, '_portfolio_url');
 	}
 }
 
