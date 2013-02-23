@@ -38,8 +38,6 @@
 					<?php echo $tag_description; ?>
 				</div> <!-- /#o-tag-info -->
 
-				<br>
-
 			<?php
 			endif;
 			?>

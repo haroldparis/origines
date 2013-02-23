@@ -21,10 +21,18 @@ body {
   	margin-right: 10px;
 }
 
-body.admin-bar .navbar-fixed-top{ 
+body.admin-bar .navbar-fixed-top { 
 	top: 28px; 
 }
 
-a:hover{
+a:hover {
 	text-decoration: none;
+}
+
+.o-thumbnail {
+	margin-bottom: 10px;
+}
+
+#o-author-info, #o-category-info, #o-tag-info {
+	margin-bottom: 30px;
 }

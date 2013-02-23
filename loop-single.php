@@ -15,7 +15,7 @@
 			
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					
-			<header class="o-title-header" class="page-header">
+			<header class="o-title-header page-header">
 				<h1 class="o-title">
 					<?php the_title(); ?>
 				</h1> <!-- /.o-title -->

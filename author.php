@@ -50,8 +50,6 @@
 					<p><?php the_author_meta( 'description' ); ?></p>
 				</div> <!-- /#o-author-description -->
 			</div> <!-- /#o-author-info -->
-			
-			<br>
 		
 		<?php endif; ?>
 			

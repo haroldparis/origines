@@ -52,8 +52,6 @@
 					<?php echo $category_description; ?>
 				</div> <!-- /#o-category-info -->
 
-				<br>
-
 			<?php
 			endif;
 			?>
