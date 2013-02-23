@@ -27,17 +27,18 @@
 
 <?php get_header(); ?>
 
-<div class="container">
+<div id="o-wrapper" class="container">
 
-<div class="row" >
-	<div class="span12 content" role="main" itemprop="mainContentOfPage">
+<div class="row">
 	
-		<?php if ( function_exists('mybread') ) mybread(); ?>
+	<div id="o-content" class="span12">
+	
+		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
 	
 		<?php get_template_part( 'loop', 'page' ); ?>
 		
-	</div><!-- .span12 -->
+	</div><!-- /#o-content -->
 	
-</div><!-- .row -->
+</div><!-- /#o-wrapper -->
 
 <?php get_footer(); ?>

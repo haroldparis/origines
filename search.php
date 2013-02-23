@@ -25,13 +25,13 @@
 
 <?php get_header(); ?>
 
-<div class="container">
+<div id="o-wrapper" class="container">
 
-<div class="row" >
+<div class="row">
 
-	<div class="span9 content" role="main" itemprop="mainContentOfPage">
+	<div id="o-content" class="span9">
 	
-		<?php if ( function_exists('mybread') ) mybread(); ?>
+		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
 		
 		<?php if ( have_posts() ) : ?>
 	
@@ -61,10 +61,10 @@
 		
 		<?php endif; ?>
 		
-	</div><!-- .span9 -->
+	</div><!-- /#o-content -->
 
 	<?php get_sidebar(); ?>
 	
-</div><!-- .row -->
+</div><!-- /#o-wrapper -->
 
 <?php get_footer(); ?>

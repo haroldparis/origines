@@ -27,10 +27,11 @@
 
 <div id="o-wrapper" class="container">
 
-<div class="row" >
+<div class="row">
+	
 	<div id="o-content" class="span9">
 
-		<?php if ( function_exists('mybread') ) mybread(); ?>
+		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
 	
 		<?php get_template_part( 'loop', 'page' ); ?>
 		

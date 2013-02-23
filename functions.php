@@ -301,11 +301,11 @@ function myget_category_parents($id, $link = false, $nicename = false, $visited 
 }
 
 //Le rendu
-function mybread() {
+function origines_bread() {
 	// variables globales
 	global $wp_query; 
 	$ped=get_query_var('paged'); 
-	$rendu = '<div id="breadcrumbs" itemprop="breadcrumb"><ul class="breadcrumb">';
+	$rendu = '<div id="o-breadcrumbs" itemprop="breadcrumb"><ul class="breadcrumb">';
 	$separator = '<span class="divider">/</span></li>';  
 	$debutlien = '<li><a rel="home" title="' . get_bloginfo('name') . '" href="' . home_url() . '">Home</a>' . $separator;
 	$debut = '<li>Home</li>';
@@ -428,7 +428,7 @@ function mybread() {
         	}
     	}
 	}
-	$rendu .= '</ul></div> <!-- breadcrumb -->';
+	$rendu .= '</ul></div> <!-- /#o-breadcrumb -->';
 	echo $rendu;
 }
 
