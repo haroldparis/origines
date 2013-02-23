@@ -33,18 +33,29 @@
 	
 		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
 
-		<header id="o-title-header" class="page-header">
-			<h1 id="o-title">
+		<header class="o-title-header page-header">
+			<h1 class="o-title">
 				<?php printf( __( 'All posts in %s', 'origines' ), single_cat_title('', false) ); ?>
-			</h1> <!-- /#o-title -->
-		</header> <!-- /#o-title-header -->
+			</h1> <!-- /.o-title -->
+		</header> <!-- /.o-title-header -->
 
 		<div id="o-content" itemprop="MainContentofPage">
 		
 			<?php 
 			$category_description = category_description();
-			if ( ! empty( $category_description ) )
-			echo '<div id="o-category-description" class="well"><p>' . $category_description . '</p></div><br>';
+			if ( ! empty( $category_description ) ): ?>
+
+				<div id="o-category-info" class="well">
+					<h4 id="o-category-info-title" class="media-heading">
+						<?php printf( __( 'About the category: %s', 'origines' ), single_cat_title('', false) ); ?>
+					</h4> <!-- /#o-category-description-title -->
+					<?php echo $category_description; ?>
+				</div> <!-- /#o-category-info -->
+
+				<br>
+
+			<?php
+			endif;
 			?>
 
 			<?php get_template_part( 'loop' ); ?>

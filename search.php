@@ -31,33 +31,35 @@
 
 	<div id="o-main" class="span9">
 	
-		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
+	<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
 		
-		<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 	
-		<header class="entry-header page-header">
-			<h1 class="entry-title">
+		<header class="o-title-header page-header">
+			<h1 class="o-title">
 				<?php printf( __( 'Search Results for: %s', 'origines' ), get_search_query() ); ?>
-			</h1>
-		</header><!-- .page-header -->
+			</h1> <!-- /.o-title -->
+		</header> <!-- /.o-title-header -->
 
-		<?php get_template_part( 'loop' ); ?>
+		<div id="o-content" itemprop="MainContentofPage">
+
+			<?php get_template_part( 'loop' ); ?>
+
+		</div> <!-- /#o-content -->
 		
-		<?php else : ?>
+	<?php else : ?>
 		
-		<div id="post-0" class="post no-results not-found">
-		
-		<header class="entry-header page-header">
-			<h1 class="entry-title">
+		<header id="o-title-header" class="page-header">
+			<h1 id="o-title">
 				<?php _e( 'Nothing Found', 'origines' ); ?>
-			</h1>
-		</header><!-- .page-header -->
+			</h1> <!-- /#o-title -->
+		</header> <!-- /#o-title-header -->
+
+		<div id="o-content" itemprop="MainContentofPage">
 		
-		<div class="entry-content">
 			<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'origines' ); ?></p>
-		</div><!-- .entry-content -->
-		
-		</div><!-- #post-0 -->
+
+		</div> <!-- /#o-content -->
 		
 		<?php endif; ?>
 		

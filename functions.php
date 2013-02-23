@@ -31,7 +31,7 @@ function origines_widgets_init() {
 		'name' => __( 'Hero', 'origines' ),
 		'id' => 'hero',
 		'description' => __( 'Appears on the homepage in a Bootstrap Hero Unit. Use text component.', 'origines' ),
-		'before_widget' => '<div class="o-widget o-hero-widget">',
+		'before_widget' => '<div class="o-widget o-hero-widget" itemprop="MainContentofPage">',
 		'after_widget' => '</div>',
 		'before_title' => '<header class="o-widget-title o-hero-widget-title entry-header page-header"><h1 class="entry-title">',
 		'after_title' => '</h1></header>',
@@ -635,11 +635,11 @@ function origines_home_head() {
 	if ( is_active_sidebar( 'hero' ) ) : dynamic_sidebar( 'hero' ); 
 	// or display the homepage header
 	else : ?>
-	<header id="o-title-header" class="page-header">
-		<h1 id="o-title">
+	<header class="o-title-header page-header">
+		<h1 class="o-title">
 			<?php bloginfo( 'name' ); ?> <span class="o-title-span"><small><?php bloginfo( 'description' ); ?></small></span>
-		</h1> <!-- /#o-title -->
-	</header> <!-- /#o-title-header --> <?php
+		</h1> <!-- /.o-title -->
+	</header> <!-- /.o-title-header --> <?php
 	endif;
 }
 

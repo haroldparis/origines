@@ -29,13 +29,19 @@
 			
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					
-		<header class="entry-header page-header">
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-		</header><!-- .page-header -->
-		
-		<div class="entry-content clearfix">
-			<?php the_content(); ?>
-		</div><!-- .entry-content -->
+			<header class="o-title-header page-header">
+				<h1 class="o-title">
+					<?php the_title(); ?>
+				</h1> <!-- /.o-title -->
+			</header> <!-- /.o-title-header -->
+			
+			<div id="o-content" class="o-entry-content clearfix" itemprop="MainContentofPage">
+
+				<?php the_content(); ?>
+
+			</div> <!-- /#o-content -->
+
+		</article>
 	
 	<?php endwhile; // end the Loop. ?>
 		
@@ -43,10 +49,18 @@
 
 	<article id="post-0" class="post no-results not-found">
 
-		<div class="entry-content clearfix">
-			<p>Apologies, but no results were found.</p>
-		</div><!-- .entry-content -->
+		<header class="o-title-header page-header">
+			<h1 class="o-title">
+				<?php _e( 'Nothing Found', 'origines' ); ?>
+			</h1> <!-- /.o-title -->
+		</header> <!-- /.o-title-header -->
 
-	</article><!-- #post-0 -->
+		<div id="o-content" class="o-entry-content clearfix" itemprop="MainContentofPage">
+		
+			<p><?php _e( 'Apologies, but no results were found.', 'origines' ); ?></p>
+
+		</div> <!-- /#o-content -->
+
+	</article><!-- /#post-0 -->
 
 <?php endif; ?>

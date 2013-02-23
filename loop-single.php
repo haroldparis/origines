@@ -29,47 +29,59 @@
 			
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					
-			<header class="o-header page-header">
-				<h1 class="o-title"><?php the_title(); ?></h1>
-			</header><!-- /.o-header -->
+			<header class="o-title-header" class="page-header">
+				<h1 class="o-title">
+					<?php the_title(); ?>
+				</h1> <!-- /.o-title -->
+			</header> <!-- /.o-title-header -->
 		
-			<div class="entry-content clearfix">
-				<?php the_content(); ?>
-			</div><!-- .entry-content -->
+			<div id="o-content" class="o-entry-content clearfix" itemprop="MainContentofPage">
 
-			<footer class="entry-meta">
-				<p><small><?php origines_entry_meta(); ?></small></p>
+				<?php the_content(); ?>
+
+			</div> <!-- /#o-content -->
+
+			<footer class="o-entry-meta">
+
+				<p class="o-entry-meta-text"><small><?php origines_entry_meta(); ?></small></p>
 				
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
-			
-				<div class="author-info well media">
-					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" alt="<?php the_author(); ?>" id="author-avatar" class="pull-left">
+
+				<div id="o-author-info" class="well media">
+					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" alt="<?php the_author(); ?>" id="o-author-avatar-link" class="pull-left">
 						<?php origines_get_avatar( get_the_author_meta( 'user_email' ), 96); ?>
 					</a>
-					<div class="author-description media-body">
-						<h4 class="media-heading"><?php printf( __( 'About %s', 'origines' ), get_the_author() ); ?></h4>
+					<div id="o-author-description" class="media-body">
+						<h4 id="o-author-info-title" class="media-heading">
+							<?php printf( __( 'About %s', 'origines' ), get_the_author() ); ?>
+						</h4> <!-- /#o-author-info-title -->
 						<p><?php the_author_meta( 'description' ); ?></p>
-						<div class="author-link">
+						<div id="o-author-link">
 							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" class="btn btn-mini btn-info">
 								<?php printf( __( '<i class="icon-user"></i> View all posts by %s', 'origines' ), get_the_author() ); ?>
 							</a>
-						</div><!-- .author-link	-->
-					</div><!-- .author-description -->
-				</div><!-- .author-info -->
+						</div><!-- /#o-author-link	-->
+					</div><!-- /#o-author-description -->
+				</div><!-- /#o-author-info -->
 		
 				<?php endif; ?>
 		
-			</footer><!-- .entry-meta -->
+			</footer><!-- /.o-entry-meta -->
+
 		</article><!-- #post -->
+
+		<nav class="o-page-nav">
 		
-		<ul class="pager">
-  			<li class="previous">
-    			<?php previous_post_link( '%link', '<i class="icon-arrow-left"></i> Previous post: <strong>%title</strong>' ); ?>
-  			</li>
-  			<li class="next">
-    			<?php next_post_link( '%link', 'Next post: <strong>%title</strong> <i class="icon-arrow-right"></i>' ); ?>
-  			</li>
-		</ul>
+			<ul class="pager">
+	  			<li class="previous">
+	    			<?php previous_post_link( '%link', '<i class="icon-arrow-left"></i> '. __( 'Previous post:' ) . ' <strong>%title</strong>' ); ?>
+	  			</li>
+	  			<li class="next">
+	    			<?php next_post_link( '%link', __( 'Next post:' ) . ' <strong>%title</strong> <i class="icon-arrow-right"></i>' ); ?>
+	  			</li>
+			</ul>
+
+		</nav><!-- /.o-page-nav -->
 		
 		<?php comments_template( '', true ); ?>
 	
@@ -79,9 +91,17 @@
 
 	<article id="post-0" class="post no-results not-found">
 
-		<div class="entry-content">
-			<p>Apologies, but no results were found.</p>
-		</div><!-- .entry-content -->
+		<header class="o-title-header page-header">
+			<h1 class="o-title">
+				<?php _e( 'Nothing Found', 'origines' ); ?>
+			</h1> <!-- /.o-title -->
+		</header> <!-- /.o-title-header -->
+
+		<div id="o-content" class="o-entry-content clearfix" itemprop="MainContentofPage">
+		
+			<p><?php _e( 'Apologies, but no results were found.', 'origines' ); ?></p>
+
+		</div> <!-- /#o-content -->
 
 	</article><!-- #post-0 -->
 

@@ -23,38 +23,25 @@
  */
 ?>
 
-<div id="comments">
+<div id="o-comments">
 
 	<?php if ( post_password_required() ) : ?>
 
 	<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'origines' ); ?></p>		
 
-</div><!-- #comments -->
+</div><!-- /#o-comments -->
 
-<?php
-return;
-endif;
-?>
+	<?php
+	return;
+	endif;
+	?>
 
-<?php if ( have_comments() ) : ?>
+	<?php if ( have_comments() ) : ?>
 
-	<h3 id="comments-title"><?php
+	<h3 id="o-comments-title"><?php
 		printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'origines' ),
 		number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
-	?></h3>
-
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			
-	<ul class="pager">
-  		<li class="previous">
-    		<?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'origines' ) ); ?>
-  		</li>
-  		<li class="next">
-    		<?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'origines' ) ); ?>
-  		</li>
-	</ul>
-
-	<?php endif; ?>
+	?></h3><!-- /#o-comments-title -->
 
 	<?php wp_list_comments( array(
     	'walker' => new origines_walker_comment,
@@ -67,15 +54,19 @@ endif;
     ) ); ?>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			
-	<ul class="pager">
-  		<li class="previous">
-    		<?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'origines' ) ); ?>
-  		</li>
-  		<li class="next">
-    		<?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'origines' ) ); ?>
-  		</li>
-	</ul>
+	
+	<nav class="o-comment-nav">
+
+		<ul class="pager">
+	  		<li class="previous">
+	    		<?php previous_comments_link( __( '<i class="icon-arrow-left"></i> Older comments', 'origines' ) ); ?>
+	  		</li>
+	  		<li class="next">
+	    		<?php next_comments_link( __( 'Newer comments <i class="icon-arrow-right"></i>', 'origines' ) ); ?>
+	  		</li>
+		</ul>
+
+	</nav class="o-comment-nav">
 
 	<?php endif; ?>
 
@@ -89,4 +80,4 @@ endif;
 
 <?php origines_comment_form(); ?>
 
-</div><!-- #comments -->
+</div><!-- /#o-comments -->

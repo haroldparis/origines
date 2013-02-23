@@ -71,7 +71,7 @@
 	</div>
 </footer> <!-- /#o-footer-bottom -->
 
-</div> <!-- /.container -->
+</div> <!-- /#o-wrapper -->
 
 <!-- le Bootstrap javascript -->
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>

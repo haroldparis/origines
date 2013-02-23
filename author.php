@@ -43,11 +43,11 @@
 		the_post();
 		?>
 			
-		<header id="o-title-header" class="page-header">
-			<h1 id="o-title">
+		<header class="o-title-header page-header">
+			<h1 class="o-title">
 				<?php printf( __( 'All posts by %s', 'origines' ), get_the_author() ); ?>
-			</h1> <!-- /#o-title -->
-		</header> <!-- /#o-title-header -->
+			</h1> <!-- /.o-title -->
+		</header> <!-- /.o-title-header -->
 		
 		<div id="o-content" itemprop="MainContentofPage">
 
@@ -58,9 +58,9 @@
 					<?php origines_get_avatar( get_the_author_meta( 'user_email' ), 96); ?>
 				</a>
 				<div id="o-author-description" class="media-body">
-					<h4 id="o-author-description-title" class="media-heading">
+					<h4 id="o-author-info-title" class="media-heading">
 						<?php printf( __( 'About %s', 'origines' ), get_the_author() ); ?>
-					</h4> <!-- /#o-author-description-title -->
+					</h4> <!-- /#o-author-info-title -->
 					<p><?php the_author_meta( 'description' ); ?></p>
 				</div> <!-- /#o-author-description -->
 			</div> <!-- /#o-author-info -->

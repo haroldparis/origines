@@ -25,14 +25,19 @@
 
 <?php get_header(); ?>
 
-<div class="container" role="main" itemprop="mainContentOfPage">
+<div id="o-wrapper" class="container">
 
 <?php origines_home_head(); ?>
 
-<div class="row" >
-	<div class="span9 content">
+<div class="row">
 
-		<?php get_template_part( 'loop' ); ?>
+	<div id="o-main" class="span9">
+
+		<div id="o-content" itemprop="MainContentofPage">
+
+			<?php get_template_part( 'loop' ); ?>
+
+		</div> <!-- /#o-content -->
 		
 	</div><!-- .span9 -->
 
