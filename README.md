@@ -1,7 +1,7 @@
 Origines WordPress Theme
 ========================
 
-Version: 0.2
+Version: 0.3
 
 Author: Harold Paris
 
@@ -14,6 +14,11 @@ GitHub URI: https://github.com/haroldparis/origines
 Demo: http://www.trbldr.fr/origines/
 
 WordPress Theme Package : https://github.com/haroldparis/origines/archive/master.zip
+
+Based upon :
+- Bootstrap v2.3.0
+- HTML5 Shiv v3.6.2pre
+- Twitter Bootstrap Hover Dropdown
 
 Description:
 ------------
