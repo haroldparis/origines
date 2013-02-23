@@ -29,7 +29,7 @@
 				</h2> <!-- /.o-title -->
 			</header> <!-- /.o-title-header -->
 
-			<?php if ( is_search() ) : ?>
+			<?php if ( is_search() || is_date() || is_tag() ) : ?>
 		
 			<div class="o-entry-summary">
 				<?php the_excerpt(); ?>
@@ -63,7 +63,7 @@
 	
 	<?php endwhile; ?>
 		
-	<?php if (  $wp_query->max_num_pages > 1 ) : ?>
+	<?php if ( $wp_query->max_num_pages > 1 ) : ?>
 
 		<nav class="o-page-nav">
 			

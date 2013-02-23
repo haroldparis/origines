@@ -21,7 +21,7 @@
 
 			<header class="o-title-header page-header">
 				<h1 class="o-title">
-					<?php _e( 'Archives', 'origines' ); ?>
+					<?php _e( 'Archives from: ', 'origines' ); the_time('F Y'); ?>
 				</h1> <!-- /.o-title -->
 			</header> <!-- /.o-title-header -->
 

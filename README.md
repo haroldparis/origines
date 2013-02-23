@@ -1,7 +1,7 @@
 Origines WordPress Theme
 ========================
 
-Version: 0.3
+Version: 0.4
 
 Author: Harold Paris
 
@@ -20,6 +20,10 @@ Based upon :
 - HTML5 Shiv v3.6.2pre
 - Twitter Bootstrap Hover Dropdown
 
+Tags : light, white, one-column, two-columns, right-sidebar, flexible-width, 
+responsive, featured-images, full-width-template, left-sidebar-template, 
+portfolio-template, custom-post-type, bootstrap 
+
 Description:
 ------------
 
@@ -31,15 +35,15 @@ the perfect touch to your site.
 
 If you like it, feel free to give me a shout on twitter !
 
-Want to participate and help me make it the best WordPress+Bootstrap theme ?
+Want to participate and help me make it the best WordPress+Bootstrap theme?
 Source code is available on Github ! https://github.com/haroldparis/origines
 
 Use Origines:
 -------------
 
-Origines is young, so I wouldn't recommend using it for a production project.
-There is still a long way to go to optimize the code, but I release it cause I
-think it's cool enough to be tested and to show some potential.
+Origines is in pre-release. You may use it for production, but there is still a long 
+way to go to optimize the code. I think it's cool enough to be tested and used and to 
+show some potential.
 
 Origines is fully widgetized. You've got:
 - Hero: for displaying a Hero unit or whatever you want on the front page. Use the
@@ -107,8 +111,6 @@ quite proud of. And I'm really looking forward to keep learning some more to be 
 release a nice framework.
 
 Here are the next steps I will dive into:
-- Optimizing syntax for SEO purpose
-- Optimizing syntax for future styling
 - Adding the footer click-to-show menu
 - Testing support and "works well with" Yoast SEO, Digg Digg and Contact Form 7 which are
 definitely some of my prefered plugins.
