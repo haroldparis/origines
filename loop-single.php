@@ -29,7 +29,7 @@
 
 			<footer class="o-entry-meta">
 
-				<p class="o-entry-meta-text"><small><?php origines_entry_meta(); ?></small></p>
+				<?php origines_entry_meta(); ?>
 				
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
 
@@ -44,7 +44,7 @@
 						<p><?php the_author_meta( 'description' ); ?></p>
 						<div id="o-author-link">
 							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" class="btn btn-mini btn-info">
-								<?php printf( __( '<i class="icon-user"></i> View all posts by %s', 'origines' ), get_the_author() ); ?>
+								<?php printf( __( '<i class="icon-user icon-white"></i> View all posts by %s', 'origines' ), get_the_author() ); ?>
 							</a>
 						</div><!-- /#o-author-link	-->
 					</div><!-- /#o-author-description -->

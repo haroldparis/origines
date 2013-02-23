@@ -357,4 +357,33 @@ class origines_walker_comment extends Walker_Comment {
     
 }
 
+/**
+ * Name: origines_widget_tag_cloud_args
+ * Description: Get the cloud tags Origines style.
+ * Credits: Thanks to Daniel Roche for his nice tutorial here : http://www.seomix.fr/fil-dariane-chemin-navigation/
+ */
+
+function origines_widget_tag_cloud_args( $args ) {
+	$args['number'] = 0;
+	$args['largest'] = 12;
+	$args['smallest'] = 12;
+	$args['unit'] = 'px';
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'origines_widget_tag_cloud_args' );
+
+function origines_tag_cloud_slug_css_class( $return ) {
+    $all_tags = get_terms('post_tag');
+	if($all_tags) {
+      foreach ($all_tags as $pt) {
+      $tag = $pt->term_id;
+        if(preg_match("#-link-" . $tag . "' #", $return)) {
+        $return = str_replace("tag-link-" . $tag . "' ", "label" . " tag-link-" . $tag . "'", $return);
+        }
+      }
+	}
+	return $return;
+}
+add_filter ( 'wp_tag_cloud', 'origines_tag_cloud_slug_css_class' );
+
 ?>

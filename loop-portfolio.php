@@ -31,8 +31,6 @@
 				<?php the_excerpt(); ?>
 			</div><!-- .entry-summary -->
 
-			<hr />
-
 			<p class="aligncenter">
 
 				<a class="o-portfolio-element-more-link btn btn-mini" href="<?php the_permalink() ?>"><i class="icon-plus-sign"></i> <?php _e( 'Read more...', 'origines' ); ?></a>

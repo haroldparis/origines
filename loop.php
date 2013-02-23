@@ -54,7 +54,7 @@
 			<?php endif; ?>
 
 			<footer class="o-entry-meta">
-				<p class="o-entry-meta-text"><small><?php origines_entry_meta(); ?></small></p>
+				<?php origines_entry_meta(); ?>
 			</footer><!-- .entry-meta -->
 			
 			<div class="clearfix"></div>

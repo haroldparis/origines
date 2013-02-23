@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 /**
  * Name: Origines WordPress Theme
@@ -9,6 +8,7 @@
  * Author website: http://www.tribeleadr.com/
  */
 ?>
+<!DOCTYPE html>
 <html lang="<?php bloginfo( 'language' ); ?>">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
