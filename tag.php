@@ -13,23 +13,23 @@
 
 <div id="o-wrapper" class="container">
 
-<div class="row">
+	<div class="row">
 
-	<div id="o-main" class="span9">
-	
-		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
-			
-		<header class="o-title-header page-header">
-			<h1 class="o-title">
-				<?php printf( __( 'All posts tagged with: %s', 'origines' ), single_tag_title('', false) ); ?>
-			</h1> <!-- /.o-title -->
-		</header> <!-- /.o-title-header -->
-
-		<div id="o-content" itemprop="MainContentofPage">
+		<div id="o-main" class="span9">
 		
-			<?php 
-			$tag_description = tag_description();
-			if ( ! empty( $tag_description ) ): ?>
+			<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
+				
+			<header class="o-title-header page-header">
+				<h1 class="o-title">
+					<?php printf( __( 'All posts tagged with: %s', 'origines' ), single_tag_title('', false) ); ?>
+				</h1> <!-- /.o-title -->
+			</header> <!-- /.o-title-header -->
+
+			<div id="o-content" itemprop="MainContentofPage">
+			
+				<?php 
+				$tag_description = tag_description();
+				if ( ! empty( $tag_description ) ): ?>
 
 				<div id="o-tag-info" class="well">
 					<h4 id="o-tag-info-title" class="media-heading">
@@ -38,18 +38,20 @@
 					<?php echo $tag_description; ?>
 				</div> <!-- /#o-tag-info -->
 
-			<?php
-			endif;
-			?>
+				<?php
+				endif;
+				?>
 
-			<?php get_template_part( 'loop' ); ?>
+				<?php get_template_part( 'loop' ); ?>
 
-		</div> <!-- /#o-content -->
-		
-	</div><!-- /#o-main -->
+			</div> <!-- /#o-content -->
+			
+		</div><!-- /#o-main -->
 
-	<?php get_sidebar(); ?>
-	
+		<?php get_sidebar(); ?>
+
+	</div><!-- /.row -->
+
 </div><!-- /#o-wrapper -->
 
 <?php get_footer(); ?>

@@ -21,6 +21,10 @@ body {
   	margin-right: 10px;
 }
 
+.aligncenter {
+	text-align: center;
+}
+
 body.admin-bar .navbar-fixed-top { 
 	top: 28px; 
 }

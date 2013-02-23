@@ -15,16 +15,18 @@
 
 <div id="o-wrapper" class="container">
 
-<div class="row">
-	
-	<div id="o-main" class="span12">
-	
-		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
-	
-		<?php get_template_part( 'loop', 'page' ); ?>
+	<div class="row">
 		
-	</div><!-- /#o-main -->
-	
+		<div id="o-main" class="span12">
+		
+			<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
+		
+			<?php get_template_part( 'loop', 'page' ); ?>
+			
+		</div><!-- /#o-main -->
+
+	</div><!-- /.row -->
+
 </div><!-- /#o-wrapper -->
 
 <?php get_footer(); ?>

@@ -15,17 +15,19 @@
 
 <div id="o-wrapper" class="container">
 
-<div class="row">
+	<div class="row">
 
-	<?php get_sidebar(); ?>
-	
-	<div id="o-main" class="span9">
-
-		<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
-	
-		<?php get_template_part( 'loop', 'page' ); ?>
+		<?php get_sidebar(); ?>
 		
-	</div><!-- /#o-main -->
+		<div id="o-main" class="span9">
+
+			<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
+		
+			<?php get_template_part( 'loop', 'page' ); ?>
+			
+		</div><!-- /#o-main -->
+
+	</div><!-- /.row -->
 	
 </div><!-- /#o-wrapper -->
 

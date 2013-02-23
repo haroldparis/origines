@@ -9,9 +9,15 @@
  */
 ?>
 
-<?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) : $postCount = 0; ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); $postCount++; ?>
+
+		<?php if ( $postCount != 1 ) : ?>
+
+			<hr />
+
+		<?php endif; ?>
 	
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -33,9 +39,13 @@
 		
 			<div class="o-entry-content">
 
-				<a class="o-thumbnail-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>">
-					<?php the_post_thumbnail('thumbnail', array('class' => 'o-thumbnail')); ?>
-				</a>
+				<?php if ( is_home() ) : ?>
+
+					<a class="o-thumbnail-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>">
+						<?php the_post_thumbnail('thumbnail', array('class' => 'o-thumbnail')); ?>
+					</a>
+
+				<?php endif; ?>
 
 				<?php the_content( __( '<p><button class="btn btn-small"><i class="icon-plus-sign"></i> Read more...</button></p>', 'origines' ) ); ?>
 			
@@ -48,8 +58,6 @@
 			</footer><!-- .entry-meta -->
 			
 			<div class="clearfix"></div>
-		
-		<hr />
 		
 		</article><!-- #post -->
 	
@@ -77,9 +85,9 @@
 	<article id="post-0" class="post no-results not-found">
 
 		<header class="o-title-header" class="page-header">
-			<h1 class="o-title">
+			<h2 class="o-title">
 				<?php _e( 'Nothing Found', 'origines' ); ?>
-			</h1> <!-- /.o-title -->
+			</h2> <!-- /.o-title -->
 		</header> <!-- /.o-title-header -->
 
 		<div id="o-content" class="o-entry-content clearfix" itemprop="MainContentofPage">

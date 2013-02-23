@@ -1,8 +1,8 @@
-<?php
+<?php 
 /**
  * Name: Origines WordPress Theme
  * GitHub URI: https://github.com/haroldparis/origines
- * Description: Origines template for single.
+ * Description: Origines template for pages.
  * Author: Harold Paris
  * Twitter: @haroldparis
  * Author website: http://www.tribeleadr.com/
@@ -14,16 +14,12 @@
 <div id="o-wrapper" class="container">
 
 	<div class="row">
-
-		<div id="o-main" class="span9">
 		
-			<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
-			
-			<?php get_template_part( 'loop', 'single' ); ?>
-				
+		<div id="o-main" class="span12">
+		
+			<?php get_template_part( 'loop', 'project' ); ?>
+		
 		</div><!-- /#o-main -->
-
-		<?php get_sidebar(); ?>
 
 	</div><!-- /.row -->
 
