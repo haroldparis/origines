@@ -60,10 +60,10 @@
 		
 			<ul class="pager">
 	  			<li class="previous">
-	    			<?php previous_post_link( '%link', '<i class="icon-arrow-left"></i> '. __( 'Previous post:' ) . ' <strong>%title</strong>' ); ?>
+	    			<?php previous_post_link( '%link', '<i class="icon-arrow-left"></i> '. __( 'Previous post:', 'origines' ) . ' <strong>%title</strong>' ); ?>
 	  			</li>
 	  			<li class="next">
-	    			<?php next_post_link( '%link', __( 'Next post:' ) . ' <strong>%title</strong> <i class="icon-arrow-right"></i>' ); ?>
+	    			<?php next_post_link( '%link', __( 'Next post:', 'origines' ) . ' <strong>%title</strong> <i class="icon-arrow-right"></i>' ); ?>
 	  			</li>
 			</ul>
 

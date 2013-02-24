@@ -12,7 +12,7 @@
  * Description: Adding theme support for translation. Translation files in /lang/
  */
 function origines_theme_setup(){
-    load_theme_textdomain('mytheme', get_template_directory() . '/languages');
+    load_theme_textdomain('origines', get_template_directory() . '/lang');
 }
 add_action('after_setup_theme', 'origines_theme_setup');
 

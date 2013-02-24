@@ -23,7 +23,7 @@
 
 			<header class="o-title-header">
 				<h2 class="o-title">
-					<a class="o-title-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>">
+					<a class="o-title-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'origines' ), the_title_attribute( 'echo=0' ) ) ); ?>">
 						<?php the_title(); ?>
 					</a>
 				</h2> <!-- /.o-title -->
@@ -41,7 +41,7 @@
 
 				<?php if ( is_home() ) : ?>
 
-					<a class="o-thumbnail-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>">
+					<a class="o-thumbnail-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'origines' ), the_title_attribute( 'echo=0' ) ) ); ?>">
 						<?php the_post_thumbnail('thumbnail', array('class' => 'o-thumbnail')); ?>
 					</a>
 
@@ -69,10 +69,10 @@
 			
 			<ul class="pager">
 		  		<li class="previous">
-		    		<?php next_posts_link( __('<i class="icon-arrow-left"></i> Previous posts') ); ?>
+		    		<?php next_posts_link( __( '<i class="icon-arrow-left"></i> Previous posts', 'origines' ) ); ?>
 		  		</li>
 		  		<li class="next">
-		    		<?php previous_posts_link( __('Next posts <i class="icon-arrow-right"></i>') ); ?>
+		    		<?php previous_posts_link( __( 'Next posts <i class="icon-arrow-right"></i>', 'origines' ) ); ?>
 		  		</li>
 			</ul>
 

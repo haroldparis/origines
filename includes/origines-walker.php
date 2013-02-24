@@ -136,7 +136,7 @@ function origines_bread() {
 	$ped=get_query_var('paged'); 
 	$rendu = '<div id="o-breadcrumbs" itemprop="breadcrumb"><ul class="breadcrumb">';
 	$separator = '<span class="divider">/</span></li>';  
-	$debutlien = '<li><a rel="home" title="' . get_bloginfo('name') . '" href="' . home_url() . '">Home</a>' . $separator;
+	$debutlien = '<li><a rel="home" title="' . get_bloginfo('name') . '" href="' . home_url() . '">' . __( 'Home', 'origines') . '</a>' . $separator;
 	$debut = '<li>Home</li>';
   
 	// si l'utilisateur a défini une page comme page d'accueil
