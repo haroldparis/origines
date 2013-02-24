@@ -7,7 +7,7 @@ Author: Harold Paris
 
 Twitter: @haroldparis
 
-Theme URI: http://www.tribeleadr.com/origines-theme-wordpress-bootstrap/ (French)
+Theme URI: http://www.tribeleadr.com/solutions/origines-theme-wordpress-bootstrap/ (French)
 
 Author URI: http://www.tribeleadr.com/
 
