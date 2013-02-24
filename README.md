@@ -1,7 +1,7 @@
 Origines WordPress Theme
 ========================
 
-Version: 0.8
+Version: 0.9 Pre-release ! Woohoo !
 
 Author: Harold Paris
 
@@ -15,6 +15,10 @@ Demo: http://www.trbldr.fr/origines/
 
 WordPress Theme Package : https://github.com/haroldparis/origines/archive/master.zip
 
+Translations:
+- en_EN
+- fr_FR
+
 Works well with:
 - SEO by Yoast
 
@@ -25,7 +29,7 @@ Based upon :
 
 Tags : light, white, one-column, two-columns, right-sidebar, flexible-width, 
 responsive, featured-images, full-width-template, left-sidebar-template, 
-portfolio-template, custom-post-type, bootstrap 
+portfolio-template, custom-post-type, bootstrap, translation-ready
 
 Description:
 ------------
