@@ -7,13 +7,15 @@ Author: Harold Paris
 
 Twitter: @haroldparis
 
+Theme URI: http://www.tribeleadr.com/origines-theme-wordpress-bootstrap/ (French)
+
 Author URI: http://www.tribeleadr.com/
 
 GitHub URI: https://github.com/haroldparis/origines
 
 Demo: http://www.trbldr.fr/origines/
 
-WordPress Theme Package : https://github.com/haroldparis/origines/archive/master.zip
+WordPress Theme Package : http://bit.ly/origineswpzip
 
 Translations:
 - en_EN
