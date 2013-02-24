@@ -9,6 +9,14 @@
  */
 
 /**
+ * Description: Adding theme support for translation. Translation files in /lang/
+ */
+function origines_theme_setup(){
+    load_theme_textdomain('mytheme', get_template_directory() . '/languages');
+}
+add_action('after_setup_theme', 'origines_theme_setup');
+
+/**
  * Description: Adding theme support for thumbnails.
  */
 add_theme_support( 'post-thumbnails' );
@@ -17,6 +25,7 @@ update_option('thumbnail_size_h', 200);
 update_option('thumbnail_crop', 1);
 update_option('large_size_w', 870);
 update_option('medium_size_w', 500);
+update_option('medium_size_h', 400);
 
 /**
  * Function Name: origines_widgets_init

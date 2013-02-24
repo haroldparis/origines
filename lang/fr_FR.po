@@ -1,0 +1,407 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Origines\n"
+"POT-Creation-Date: 2013-02-24 09:51+0100\n"
+"PO-Revision-Date: 2013-02-24 09:55+0100\n"
+"Last-Translator: \n"
+"Language-Team: TRIBELEADR <harold.paris@tribeleadr.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: /Users/haroldparis/Sites/wordpressdev/wp-content/themes/"
+"origines\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: archive.php:24
+msgid "Archives from: "
+msgstr "Archives de :"
+
+#: author.php:34
+#, php-format
+msgid "All posts by %s"
+msgstr "Tous les articles de %s"
+
+#: author.php:48 loop-single.php:42
+#, php-format
+msgid "About %s"
+msgstr "A propos de %s"
+
+#: category.php:24
+#, php-format
+msgid "All posts in %s"
+msgstr "Tous les articles dans %s"
+
+#: category.php:36
+#, php-format
+msgid "About the category: %s"
+msgstr "A propos de la catégorie : %s"
+
+#: comments.php:16
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+"Cet article est protégé par un mot de passe. Entrez le mot de passe pour "
+"voir les commentaires."
+
+#: comments.php:48
+msgid "<i class=\"icon-arrow-left\"></i> Older comments"
+msgstr "<i class=\"icon-arrow-left\"></i> Anciens commentaires"
+
+#: comments.php:51
+msgid "Newer comments <i class=\"icon-arrow-right\"></i>"
+msgstr "Nouveaux commentaires <i class=\"icon-arrow-right\"></i>"
+
+#: comments.php:61
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: footer.php:53
+msgid "Copyright &copy;"
+msgstr "Copyright &copy;"
+
+#: footer.php:53
+msgid "All Rights Reserved."
+msgstr "Tous droits réservés."
+
+#: footer.php:56
+msgid "Proudly Powered by"
+msgstr "Fièrement propulsé par"
+
+#: footer.php:56
+msgid "and"
+msgstr "et"
+
+#: footer.php:56
+msgid "Design by"
+msgstr "Design par"
+
+#: loop-page.php:40 loop-project.php:61 loop-single.php:82 loop.php:89
+#: page-front.php:40 search.php:40
+msgid "Nothing Found"
+msgstr "Rien de trouvé"
+
+#: loop-page.php:46 loop-portfolio.php:61 loop-project.php:67
+#: loop-single.php:88 loop.php:95 page-front.php:46
+msgid "Apologies, but no results were found."
+msgstr "Toutes nos excuses, mais aucun résultat n'a été trouvé."
+
+#: loop-portfolio.php:36
+msgid "Read more..."
+msgstr "Lire la suite..."
+
+#: loop-portfolio.php:42
+msgid "Live Preview"
+msgstr "Aperçu"
+
+#: loop-project.php:36
+msgid "Review more projects..."
+msgstr "Voir d'autres projets..."
+
+#: loop-project.php:45
+msgid "Live preview"
+msgstr "Aperçu"
+
+#: loop-single.php:47
+#, php-format
+msgid "<i class=\"icon-user icon-white\"></i> View all posts by %s"
+msgstr "<i class=\"icon-user icon-white\"></i> Voir tous les articles de %s"
+
+#: loop-single.php:63
+msgid "Previous post:"
+msgstr "Article précédent :"
+
+#: loop-single.php:66
+msgid "Next post:"
+msgstr "Article suivant :"
+
+#: loop.php:26 loop.php:44
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalien vers %s"
+
+#: loop.php:50
+msgid ""
+"<p><button class=\"btn btn-small\"><i class=\"icon-plus-sign\"></i> Read "
+"more...</button></p>"
+msgstr ""
+"<p><button class=\"btn btn-small\"><i class=\"icon-plus-sign\"></i> Lire la "
+"suite...</button></p>"
+
+#: loop.php:72
+msgid "<i class=\"icon-arrow-left\"></i> Previous posts"
+msgstr "<i class=\"icon-arrow-left\"></i> Articles précédents"
+
+#: loop.php:75
+msgid "Next posts <i class=\"icon-arrow-right\"></i>"
+msgstr "Articles suivants <i class=\"icon-arrow-right\"></i>"
+
+#: search.php:26
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de la recherche pour : %s"
+
+#: search.php:46
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, mais votre recherche n'a produit aucuns résultats. Essayez une autre "
+"recherche avec d'autres mots-clés."
+
+#: tag.php:24
+#, php-format
+msgid "All posts tagged with: %s"
+msgstr "Tous les articles taggés avec : %s"
+
+#: tag.php:36
+#, php-format
+msgid "About the tag: %s"
+msgstr "A propos du tag : %s"
+
+#: includes/origines-entry-meta.php:34
+#, php-format
+msgid "View all posts by %s"
+msgstr "Voir tous les articles par %s"
+
+#: includes/origines-entry-meta.php:40
+#, php-format
+msgid ""
+"<p class=\"muted o-entry-meta-text\"><small>This entry was posted on %3$s in "
+"%1$s and tagged %2$s by %4$s</small></p>"
+msgstr ""
+"<p class=\"muted o-entry-meta-text\"><small>Cet article a été publié le %3$s "
+"dans %1$s et taggé %2$s par %4$s</small></p>"
+
+#: includes/origines-entry-meta.php:42
+#, php-format
+msgid ""
+"<p class=\"muted o-entry-meta-text\"><small>This entry was posted on %3$s in "
+"%1$s by %4$s</small></p>"
+msgstr ""
+"<p class=\"muted o-entry-meta-text\"><small>Cet article a été publié le %3$s "
+"dans %1$s par %4$s</small></p>"
+
+#: includes/origines-entry-meta.php:44
+#, php-format
+msgid ""
+"<p class=\"muted o-entry-meta-text\"><small>This entry was posted on %3$s by "
+"%4$s</small></p>"
+msgstr ""
+"<p class=\"muted o-entry-meta-text\"><small>Cet article a été publié le %3$s "
+"par %4$s</small></p>"
+
+#: includes/origines-init.php:36
+msgid "Hero"
+msgstr "Hero"
+
+#: includes/origines-init.php:38
+msgid "Appears on the homepage in a Bootstrap Hero Unit. Use text component."
+msgstr "Appears on the homepage in a Bootstrap Hero Unit. Use text component."
+
+#: includes/origines-init.php:46
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: includes/origines-init.php:48
+msgid "Appears on posts and pages except if full-width template is selected."
+msgstr "Appears on posts and pages except if full-width template is selected."
+
+#: includes/origines-init.php:56
+msgid "Footer 1"
+msgstr "Footer 1"
+
+#: includes/origines-init.php:58
+msgid "Appears on posts and pages on the left side of the footer."
+msgstr "Appears on posts and pages on the left side of the footer."
+
+#: includes/origines-init.php:66
+msgid "Footer 2"
+msgstr "Footer 2"
+
+#: includes/origines-init.php:69
+msgid "Appears on posts and pages on the center of the footer."
+msgstr "Appears on posts and pages on the center of the footer."
+
+#: includes/origines-init.php:77
+msgid "Footer 3"
+msgstr "Footer 3"
+
+#: includes/origines-init.php:79 includes/origines-init.php:89
+msgid "Appears on posts and pages on the right side of the footer."
+msgstr "Appears on posts and pages on the right side of the footer."
+
+#: includes/origines-init.php:87
+msgid "Footer 4"
+msgstr "Footer 4"
+
+#: includes/origines-init.php:104
+msgid "Header Menu"
+msgstr "Header Menu"
+
+#: includes/origines-init.php:105
+msgid "Footer Menu"
+msgstr "Footer Menu"
+
+#: includes/origines-init.php:122
+msgid "Add New Project"
+msgstr "Add New Project"
+
+#: includes/origines-init.php:123
+msgid "Edit Project"
+msgstr "Edit Project"
+
+#: includes/origines-init.php:124
+msgid "New Project"
+msgstr "New Project"
+
+#: includes/origines-init.php:125
+msgid "View Project"
+msgstr "View Project"
+
+#: includes/origines-init.php:126
+msgid "Search Projects"
+msgstr "Search Projects"
+
+#: includes/origines-init.php:127
+msgid "No projects found"
+msgstr "No projects found"
+
+#: includes/origines-init.php:128
+msgid "No projects found in Trash"
+msgstr "No projects found in Trash"
+
+#: includes/origines-init.php:164
+#, php-format
+msgid "Project updated. <a href=\"%s\">View project</a>"
+msgstr "Project updated. <a href=\"%s\">View project</a>"
+
+#: includes/origines-init.php:165
+msgid "Custom field updated."
+msgstr "Custom field updated."
+
+#: includes/origines-init.php:166
+msgid "Custom field deleted."
+msgstr "Custom field deleted."
+
+#: includes/origines-init.php:167
+msgid "Project updated."
+msgstr "Project updated."
+
+#: includes/origines-init.php:169
+#, php-format
+msgid "Project restored to revision from %s"
+msgstr "Project restored to revision from %s"
+
+#: includes/origines-init.php:170
+#, php-format
+msgid "Project published. <a href=\"%s\">View project</a>"
+msgstr "Project published. <a href=\"%s\">View project</a>"
+
+#: includes/origines-init.php:171
+msgid "Project saved."
+msgstr "Project saved."
+
+#: includes/origines-init.php:172
+#, php-format
+msgid "Project submitted. <a target=\"_blank\" href=\"%s\">Preview project</a>"
+msgstr ""
+"Project submitted. <a target=\"_blank\" href=\"%s\">Preview project</a>"
+
+#: includes/origines-init.php:173
+#, php-format
+msgid ""
+"Project scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Preview project</a>"
+msgstr ""
+"Project scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Preview project</a>"
+
+#: includes/origines-init.php:175
+msgid "M j, Y @ G:i"
+msgstr "j M Y @ G:i"
+
+#: includes/origines-init.php:176
+#, php-format
+msgid ""
+"Project draft updated. <a target=\"_blank\" href=\"%s\">Preview project</a>"
+msgstr ""
+"Project draft updated. <a target=\"_blank\" href=\"%s\">Preview project</a>"
+
+#: includes/origines-walker.php:347
+msgid "Your comment is awaiting moderation."
+msgstr "Your comment is awaiting moderation."
+
+#: includes/origines-walker.php:356
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s at %2$s"
+
+#: includes/origines-walker.php:356
+msgid "(Edit)"
+msgstr "(Edit)"
+
+#: includes/origines-walker.php:417
+msgid "Name"
+msgstr "Nom"
+
+#: includes/origines-walker.php:419
+msgid "Email"
+msgstr "Email"
+
+#: includes/origines-walker.php:421
+msgid "Website"
+msgstr "Site"
+
+#: includes/origines-walker.php:425
+#, php-format
+msgid "Required fields are marked %s"
+msgstr "Les champs obligatoires sont marqués par %s"
+
+#: includes/origines-walker.php:429
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Vous devez être <a href=\"%s\">connecté</a> pour publier un commentaire."
+
+#: includes/origines-walker.php:430
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Connecté en tant que <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log "
+"out of this account\">Se déconnecter ?</a>"
+
+#: includes/origines-walker.php:431
+msgid "Your email address will not be published."
+msgstr "Votre adresse email ne sera pas publiée."
+
+#: includes/origines-walker.php:432
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Vous pouvez utiliser les balises <abbr title=\"HyperText Markup Language"
+"\">HTML</abbr> suivantes : %s"
+
+#: includes/origines-walker.php:435
+msgid "Leave a Reply"
+msgstr "Répondre"
+
+#: includes/origines-walker.php:436
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Répondre à %s"
+
+#: includes/origines-walker.php:437
+msgid "Cancel reply"
+msgstr "Annuler réponse"
+
+#: includes/origines-walker.php:438
+msgid "Post Comment"
+msgstr "Publier un commentaire"
