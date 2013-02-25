@@ -32,10 +32,8 @@
 	<meta name="msapplication-TileColor" content="#EEEEEE">
 	<meta name="msapplication-TileImage" content="<?php bloginfo( 'template_directory' ); ?>/img/win8-tile-icon.png">
 
-	<!-- le CSS -->
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<!--[if lt IE 9]>
-	<script src="<?php bloginfo( 'template_directory' ); ?>/js/html5shiv.js" type="text/javascript"></script>
+	<?php wp_print_scripts(array('html5shiv')); ?>
 	<![endif]-->
 
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
