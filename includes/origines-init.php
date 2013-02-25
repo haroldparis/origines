@@ -9,12 +9,26 @@
  */
 
 /**
+ * Function Name: origines_scripts_setup
+ * Description: Adding scripts the right way.
+ */
+function origines_scripts_setup(){
+		wp_deregister_script('jquery'); 
+		wp_register_script('jquery', 'http://code.jquery.com/jquery-1.9.1.min.js', false, '1.9.1', true); 
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '2.3.0', true);
+		wp_enqueue_script('bootstrap-hover', get_template_directory_uri() . '/js/twitter-bootstrap-hover-dropdown.min.js', array('bootstrap'), false, true);
+}
+add_action('init', 'origines_scripts_setup');
+
+/**
+ * Function Name: origines_theme_setup
  * Description: Adding theme support for translation. Translation files in /lang/
  */
-function origines_theme_setup(){
+function origines_lang_setup(){
     load_theme_textdomain('origines', get_template_directory() . '/lang');
 }
-add_action('after_setup_theme', 'origines_theme_setup');
+add_action('after_setup_theme', 'origines_lang_setup');
 
 /**
  * Description: Adding theme support for thumbnails.
