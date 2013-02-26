@@ -37,7 +37,7 @@ function origines_logo($logofile){
 	<?php
 	} else {
 	?>
-		<a class="brand" style="padding: 5px 20px 5px;" href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'description' ); ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/img/<?php echo $logofile; ?>" alt="<?php bloginfo( 'name' ); ?>" height="30px" /></a>
+		<a class="brand" style="padding: 5px 20px 5px;" href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'description' ); ?>"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/<?php echo $logofile; ?>" alt="<?php bloginfo( 'name' ); ?>" height="30px" /></a>
 	<?php
 	}
 }
