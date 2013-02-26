@@ -8,9 +8,9 @@
  * Author website: http://www.tribeleadr.com/
  */
 
-require_once('includes/origines-init.php');
-require_once('includes/origines-walker.php');
-require_once('includes/origines-entry-meta.php');
+require_once( trailingslashit( get_template_directory() ) . 'includes/origines-init.php');
+require_once( trailingslashit( get_template_directory() ) . 'includes/origines-walker.php');
+require_once( trailingslashit( get_template_directory() ) . 'includes/origines-entry-meta.php');
 
 /**
  * Function Name: origines_home_head
