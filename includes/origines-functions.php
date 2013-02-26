@@ -19,7 +19,8 @@ function origines_home_head() {
 	else : ?>
 	<header class="o-title-header page-header">
 		<h1 class="o-title">
-			<?php bloginfo( 'name' ); ?> <span class="o-title-span"><small><?php bloginfo( 'description' ); ?></small></span>
+			<?php bloginfo( 'name' ); ?> 
+			<small><?php bloginfo( 'description' ); ?></small>
 		</h1> <!-- /.o-title -->
 	</header> <!-- /.o-title-header --> <?php
 	endif;
