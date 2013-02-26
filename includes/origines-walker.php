@@ -446,7 +446,7 @@ function origines_comment_form( $args = array(), $post_id = null ) {
 			<?php do_action( 'comment_form_before' ); ?>
 
 			<div id="respond" class="row">
-			<form action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>"">
+			<form action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>">
   			<fieldset class="span9">
   			<legend><?php comment_form_title( $args['title_reply'], $args['title_reply_to'] ); ?> <small><?php cancel_comment_reply_link( $args['cancel_reply_link'] ); ?></small></legend>
   			<?php if ( get_option( 'comment_registration' ) && !is_user_logged_in() ) : ?>

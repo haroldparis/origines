@@ -39,10 +39,10 @@
 		
 			<div class="o-entry-content">
 
-				<?php if ( is_home() ) : ?>
+				<?php if ( is_home() || is_category() ) : ?>
 
 					<a class="o-thumbnail-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'origines' ), the_title_attribute( 'echo=0' ) ) ); ?>">
-						<?php the_post_thumbnail('thumbnail', array('class' => 'o-thumbnail')); ?>
+						<?php the_post_thumbnail('origines-thumb', array('class' => 'o-thumbnail')); ?>
 					</a>
 
 				<?php endif; ?>

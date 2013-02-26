@@ -13,9 +13,11 @@
  * Description: Adding styles the right way.
  */
 function origines_styles(){ 
- 	wp_enqueue_style( 'origines', get_template_directory_uri() . '/style.css', false, false, 'all' );
+ 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', false, false, 'all' );
+ 	wp_enqueue_style( 'origines', get_template_directory_uri() . '/css/origines.css', array('bootstrap'), false, 'all' );
+ 	wp_enqueue_style( 'bootstrap-responsive', get_template_directory_uri() . '/css/bootstrap-responsive.min.css', array('origines', 'bootstrap'), false, 'all' );
 }
-add_action('wp_head', 'origines_styles');
+add_action('wp_enqueue_scripts', 'origines_styles');
 
 /**
  * Function Name: origines_scripts_setup
@@ -46,12 +48,10 @@ add_action('after_setup_theme', 'origines_lang_setup');
  * Description: Adding theme support for thumbnails.
  */
 add_theme_support( 'post-thumbnails' );
-update_option('thumbnail_size_w', 870);
-update_option('thumbnail_size_h', 200);
-update_option('thumbnail_crop', 1);
 update_option('large_size_w', 870);
 update_option('medium_size_w', 500);
 update_option('medium_size_h', 400);
+add_image_size( 'origines-thumb', 870, 200, 1 );
 
 /**
  * Function Name: origines_widgets_init
