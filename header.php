@@ -24,13 +24,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- le Favicon & mobile icons -->
-	<link rel="apple-touch-icon" href="<?php bloginfo( 'template_directory' ); ?>/img/apple-icon-touch.png">
-	<link rel="icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.png">
+	<link rel="apple-touch-icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/img/apple-icon-touch.png">
+	<link rel="icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/img/favicon.png">
 	<!--[if IE]>
-	<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.ico">
+	<link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/img/favicon.ico">
 	<![endif]-->
 	<meta name="msapplication-TileColor" content="#EEEEEE">
-	<meta name="msapplication-TileImage" content="<?php bloginfo( 'template_directory' ); ?>/img/win8-tile-icon.png">
+	<meta name="msapplication-TileImage" content="<?php bloginfo( 'stylesheet_directory' ); ?>/img/win8-tile-icon.png">
 
 	<!--[if lt IE 9]>
 	<?php wp_print_scripts(array('html5shiv')); ?>
