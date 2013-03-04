@@ -1,7 +1,7 @@
 Origines WordPress Theme
 ========================
 
-Version: 0.9 Pre-release ! Woohoo !
+Version: 0.9.1
 
 Author: Harold Paris
 
@@ -33,6 +33,17 @@ Tags : light, white, one-column, two-columns, right-sidebar, flexible-width,
 responsive, featured-images, full-width-template, left-sidebar-template, 
 portfolio-template, custom-post-type, bootstrap, translation-ready
 
+Change log:
+-----------
+
+### v0.9.1
+
+- Optimizing child theme compatibility
+
+### v0.9 
+
+- Pre-release - Woohoo !
+
 Description:
 ------------
 
@@ -51,8 +62,10 @@ Use Origines:
 -------------
 
 Origines is in pre-release. You may use it for production, but there is still a 
-way to go to optimize the code and add more features. I think it's cool enough to 
-be tested and used and I believe it shows some potential.
+way to go to optimize the code and add more features. 
+
+Anyway, I think it's cool enough to be tested and used and I believe it shows 
+some potential.
 
 ### Add your own logos (or other graphics):
 
