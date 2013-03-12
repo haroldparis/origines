@@ -282,7 +282,7 @@ function origines_tag_cloud_slug_css_class( $return ) {
       foreach ($all_tags as $pt) {
       $tag = $pt->term_id;
         if(preg_match("#-link-" . $tag . "' #", $return)) {
-        $return = str_replace("tag-link-" . $tag . "' ", "label" . " tag-link-" . $tag . "'", $return);
+        $return = str_replace("tag-link-" . $tag . "' ", "label" . " tag-link-" . $tag . "' ", $return);
         }
       }
 	}
