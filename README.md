@@ -1,7 +1,7 @@
 Origines WordPress Theme
 ========================
 
-Version: 0.9.1
+Version: 0.9.2
 
 Author: Harold Paris
 
@@ -36,11 +36,16 @@ portfolio-template, custom-post-type, bootstrap, translation-ready
 Change log:
 -----------
 
-### v0.9.1
+### 0.9.2
+
+- Adding an admin area called "Origines Panel"
+- Logo, favicons and Google Analytics can be set in the "Origines Panel"
+
+### 0.9.1
 
 - Optimizing child theme compatibility
 
-### v0.9 
+### 0.9 
 
 - Pre-release - Woohoo !
 
@@ -69,20 +74,20 @@ some potential.
 
 ### Add your own logos (or other graphics):
 
-All the themes images (icons, favicons, official logo, etc) are available in /origines/img/.
-You can modify them. 
+All the themes images (icons, favicons, official logo, etc) can be registered via the
+Origines Panel available in your admin area. 
 
 If you want to display your logo (max 30px height with the original template) in the top
 navigation bar in replacement of your WordPress title, you can register it in the
-Origines Panel available in your Admin area.
+Origines Panel available in your admin area.
 
 ### Widgets:
 
 Origines is fully widgetized. You've got:
+- Sidebar: well... the sidebar.
 - Hero: for displaying a Hero unit or whatever you want on the front page just on top
 of the articles. Use it and add a text widget as an example. If it's not used, you will 
 have a header by default showing your blog title and blog description.
-- Sidebar: well... the sidebar.
 - 4 footers: from left to right. If you use 1, 2 or only 3 of them, they will 
 automatically adjust in width to the content... which I think is cool. ^^
 - 2 menus: available in the Appearance > Menus. Only the header one is used for the
@@ -126,9 +131,9 @@ diplay the projects available in the custom post category.
 
 ### Google Analytics:
 
-Google Analytics code can be found directly in the function.php file. 
+Google Analytics Property ID can be added in the Origines Panel available in your admin area.
 
-In order to configure it, you need to update the $propertyID variable "UA-XXX" with your 
+In order to configure it, you need to update your property ID "UA-XXX" with your 
 GA Property ID.
 
 ### Feedbacks needed:
