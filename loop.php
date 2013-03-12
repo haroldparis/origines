@@ -65,17 +65,20 @@
 		
 	<?php if ( $wp_query->max_num_pages > 1 ) : ?>
 
-		<nav class="o-page-nav">
-			
-			<ul class="pager">
-		  		<li class="previous">
-		    		<?php next_posts_link( __( '<i class="icon-arrow-left"></i> Previous posts', 'origines' ) ); ?>
-		  		</li>
-		  		<li class="next">
-		    		<?php previous_posts_link( __( 'Next posts <i class="icon-arrow-right"></i>', 'origines' ) ); ?>
-		  		</li>
-			</ul>
+		<nav class="o-page-nav pagination pagination-centered">
+			<?php
+			global $wp_query;
 
+			$big = 999999999; // need an unlikely integer
+
+			echo paginate_links( array(
+				'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+				'format' => '?paged=%#%',
+				'current' => max( 1, get_query_var('paged') ),
+				'total' => $wp_query->max_num_pages,
+				'type' => 'list'
+			) );
+			?>
 		</nav><!-- /.o-page-nav -->
 		
 	<?php endif; ?>

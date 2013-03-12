@@ -158,10 +158,10 @@ function origines_bread() {
 			else { $rendu .= $debutlien; } 
 		}
 
-		//Si c'est l'accueil
+		// Si c'est l'accueil
     	elseif ( is_home() ) { $rendu .= $debut; }
 
-    	//pour tout le reste
+    	// pour tout le reste
     	else { $rendu .= $debutlien; }
 
     	// les catégories
@@ -174,7 +174,7 @@ function origines_bread() {
 			if ( $thisCat->parent == 0 ) $rendu .= '';
 			if ( $ped <= 1 ) $rendu .= '<li>' . single_cat_title("", false) . '</li>';
 			elseif ( $ped > 1 ) {
-        		$rendu .= '<li><a href="' . get_category_link( $thisCat ) . '" title="' . single_cat_title("", false).'">' . single_cat_title("", false).'</a>' . $separator;
+        		$rendu .= '<li><a href="' . get_category_link( $thisCat ) . '" title="' . single_cat_title("", false).'">' . single_cat_title("", false).'</a>' . $separator . '<li>' . __( 'Page ', 'origines' ) . $ped . '</li>';
   	      	}
    		}
 
@@ -204,7 +204,7 @@ function origines_bread() {
         	}
     	}
 
-    	//les archives hors catégories
+    	// les archives hors catégories
     	elseif ( is_archive() && !is_category() ) {
     		$posttype = get_post_type();
       		$tata = get_post_type_object( $posttype );
@@ -226,7 +226,7 @@ function origines_bread() {
       		$rendu .= '<li>Ooops... 404.</li>';
     	}
 
-    	//Un article
+    	// Un article
     	elseif ( is_single() ) {
       		$category = get_the_category();
       		$category_id = get_cat_ID( $category[0]->cat_name );
@@ -242,7 +242,7 @@ function origines_bread() {
         	}
     	}
 
-    	//Une page
+    	// Une page
     	elseif ( is_page()) {
       		$post = $wp_query->get_queried_object();
       		if ( $post->post_parent == 0 ) { $rendu .= "<li>" . the_title('','',FALSE) . "</li>"; }
