@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Origines\n"
-"POT-Creation-Date: 2013-02-24 10:10+0100\n"
-"PO-Revision-Date: 2013-02-24 10:10+0100\n"
+"POT-Creation-Date: 2013-03-12 21:14+0100\n"
+"PO-Revision-Date: 2013-03-12 21:16+0100\n"
 "Last-Translator: \n"
 "Language-Team: TRIBELEADR <harold.paris@tribeleadr.com>\n"
 "Language: en_US\n"
@@ -75,17 +75,17 @@ msgstr "Fièrement propulsé par"
 msgid "and"
 msgstr "et"
 
-#: ../footer.php:56
+#: ../footer.php:56 ../includes/origines-admin.php:235
 msgid "Design by"
 msgstr "Design par"
 
 #: ../loop-page.php:40 ../loop-project.php:61 ../loop-single.php:82
-#: ../loop.php:89 ../page-front.php:40 ../search.php:40
+#: ../loop.php:92 ../page-front.php:40 ../search.php:40
 msgid "Nothing Found"
 msgstr "Rien de trouvé"
 
 #: ../loop-page.php:46 ../loop-portfolio.php:61 ../loop-project.php:67
-#: ../loop-single.php:88 ../loop.php:95 ../page-front.php:46
+#: ../loop-single.php:88 ../loop.php:98 ../page-front.php:46
 msgid "Apologies, but no results were found."
 msgstr "Toutes nos excuses, mais aucun résultat n'a été trouvé."
 
@@ -124,20 +124,8 @@ msgid "Permalink to %s"
 msgstr "Permalien vers %s"
 
 #: ../loop.php:50
-msgid ""
-"<p><button class=\"btn btn-small\"><i class=\"icon-plus-sign\"></i> Read "
-"more...</button></p>"
-msgstr ""
-"<p><button class=\"btn btn-small\"><i class=\"icon-plus-sign\"></i> Lire la "
-"suite...</button></p>"
-
-#: ../loop.php:72
-msgid "<i class=\"icon-arrow-left\"></i> Previous posts"
-msgstr "<i class=\"icon-arrow-left\"></i> Articles précédents"
-
-#: ../loop.php:75
-msgid "Next posts <i class=\"icon-arrow-right\"></i>"
-msgstr "Articles suivants <i class=\"icon-arrow-right\"></i>"
+msgid "<span class=\"label label-info\">Read more...</span>"
+msgstr "<span class=\"label label-info\">Lire la suite...</span>"
 
 #: ../search.php:26
 #, php-format
@@ -165,6 +153,18 @@ msgstr "Tous les articles taggés avec : %s"
 #, php-format
 msgid "About the tag: %s"
 msgstr "A propos du tag : %s"
+
+#: ../includes/origines-admin.php:27
+msgid "Origines Panel"
+msgstr "Origines Panel"
+
+#: ../includes/origines-admin.php:134
+msgid "Origines Options"
+msgstr "Origines Options"
+
+#: ../includes/origines-admin.php:235
+msgid "Origines is Proudly Powered by"
+msgstr "Origines est fièrement propulsé par"
 
 #: ../includes/origines-entry-meta.php:34
 #, php-format
@@ -198,124 +198,124 @@ msgstr ""
 "<p class=\"muted o-entry-meta-text\"><small>Cet article a été publié le %3$s "
 "par %4$s</small></p>"
 
-#: ../includes/origines-init.php:36
-msgid "Hero"
-msgstr "Hero"
-
-#: ../includes/origines-init.php:38
-msgid "Appears on the homepage in a Bootstrap Hero Unit. Use text component."
-msgstr "Appears on the homepage in a Bootstrap Hero Unit. Use text component."
-
-#: ../includes/origines-init.php:46
+#: ../includes/origines-init.php:62
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: ../includes/origines-init.php:48
+#: ../includes/origines-init.php:64
 msgid "Appears on posts and pages except if full-width template is selected."
 msgstr "Appears on posts and pages except if full-width template is selected."
 
-#: ../includes/origines-init.php:56
+#: ../includes/origines-init.php:72
+msgid "Hero"
+msgstr "Hero"
+
+#: ../includes/origines-init.php:74
+msgid "Appears on the homepage in a Bootstrap Hero Unit. Use text component."
+msgstr "Appears on the homepage in a Bootstrap Hero Unit. Use text component."
+
+#: ../includes/origines-init.php:82
 msgid "Footer 1"
 msgstr "Footer 1"
 
-#: ../includes/origines-init.php:58
+#: ../includes/origines-init.php:84
 msgid "Appears on posts and pages on the left side of the footer."
 msgstr "Appears on posts and pages on the left side of the footer."
 
-#: ../includes/origines-init.php:66
+#: ../includes/origines-init.php:92
 msgid "Footer 2"
 msgstr "Footer 2"
 
-#: ../includes/origines-init.php:69
+#: ../includes/origines-init.php:95
 msgid "Appears on posts and pages on the center of the footer."
 msgstr "Appears on posts and pages on the center of the footer."
 
-#: ../includes/origines-init.php:77
+#: ../includes/origines-init.php:103
 msgid "Footer 3"
 msgstr "Footer 3"
 
-#: ../includes/origines-init.php:79 ../includes/origines-init.php:89
+#: ../includes/origines-init.php:105 ../includes/origines-init.php:115
 msgid "Appears on posts and pages on the right side of the footer."
 msgstr "Appears on posts and pages on the right side of the footer."
 
-#: ../includes/origines-init.php:87
+#: ../includes/origines-init.php:113
 msgid "Footer 4"
 msgstr "Footer 4"
 
-#: ../includes/origines-init.php:104
+#: ../includes/origines-init.php:130
 msgid "Header Menu"
 msgstr "Header Menu"
 
-#: ../includes/origines-init.php:105
+#: ../includes/origines-init.php:131
 msgid "Footer Menu"
 msgstr "Footer Menu"
 
-#: ../includes/origines-init.php:122
+#: ../includes/origines-init.php:148
 msgid "Add New Project"
 msgstr "Add New Project"
 
-#: ../includes/origines-init.php:123
+#: ../includes/origines-init.php:149
 msgid "Edit Project"
 msgstr "Edit Project"
 
-#: ../includes/origines-init.php:124
+#: ../includes/origines-init.php:150
 msgid "New Project"
 msgstr "New Project"
 
-#: ../includes/origines-init.php:125
+#: ../includes/origines-init.php:151
 msgid "View Project"
 msgstr "View Project"
 
-#: ../includes/origines-init.php:126
+#: ../includes/origines-init.php:152
 msgid "Search Projects"
 msgstr "Search Projects"
 
-#: ../includes/origines-init.php:127
+#: ../includes/origines-init.php:153
 msgid "No projects found"
 msgstr "No projects found"
 
-#: ../includes/origines-init.php:128
+#: ../includes/origines-init.php:154
 msgid "No projects found in Trash"
 msgstr "No projects found in Trash"
 
-#: ../includes/origines-init.php:164
+#: ../includes/origines-init.php:190
 #, php-format
 msgid "Project updated. <a href=\"%s\">View project</a>"
 msgstr "Project updated. <a href=\"%s\">View project</a>"
 
-#: ../includes/origines-init.php:165
+#: ../includes/origines-init.php:191
 msgid "Custom field updated."
 msgstr "Custom field updated."
 
-#: ../includes/origines-init.php:166
+#: ../includes/origines-init.php:192
 msgid "Custom field deleted."
 msgstr "Custom field deleted."
 
-#: ../includes/origines-init.php:167
+#: ../includes/origines-init.php:193
 msgid "Project updated."
 msgstr "Project updated."
 
-#: ../includes/origines-init.php:169
+#: ../includes/origines-init.php:195
 #, php-format
 msgid "Project restored to revision from %s"
 msgstr "Project restored to revision from %s"
 
-#: ../includes/origines-init.php:170
+#: ../includes/origines-init.php:196
 #, php-format
 msgid "Project published. <a href=\"%s\">View project</a>"
 msgstr "Project published. <a href=\"%s\">View project</a>"
 
-#: ../includes/origines-init.php:171
+#: ../includes/origines-init.php:197
 msgid "Project saved."
 msgstr "Project saved."
 
-#: ../includes/origines-init.php:172
+#: ../includes/origines-init.php:198
 #, php-format
 msgid "Project submitted. <a target=\"_blank\" href=\"%s\">Preview project</a>"
 msgstr ""
 "Project submitted. <a target=\"_blank\" href=\"%s\">Preview project</a>"
 
-#: ../includes/origines-init.php:173
+#: ../includes/origines-init.php:199
 #, php-format
 msgid ""
 "Project scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
@@ -324,11 +324,11 @@ msgstr ""
 "Project scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
 "\"%2$s\">Preview project</a>"
 
-#: ../includes/origines-init.php:175
+#: ../includes/origines-init.php:201
 msgid "M j, Y @ G:i"
 msgstr "j M Y @ G:i"
 
-#: ../includes/origines-init.php:176
+#: ../includes/origines-init.php:202
 #, php-format
 msgid ""
 "Project draft updated. <a target=\"_blank\" href=\"%s\">Preview project</a>"
@@ -338,6 +338,10 @@ msgstr ""
 #: ../includes/origines-walker.php:139
 msgid "Home"
 msgstr "Accueil"
+
+#: ../includes/origines-walker.php:177
+msgid "Page "
+msgstr "Page "
 
 #: ../includes/origines-walker.php:347
 msgid "Your comment is awaiting moderation."
@@ -413,6 +417,19 @@ msgstr "Annuler réponse"
 #: ../includes/origines-walker.php:438
 msgid "Post Comment"
 msgstr "Publier un commentaire"
+
+#~ msgid ""
+#~ "<p><button class=\"btn btn-small\"><i class=\"icon-plus-sign\"></i> Read "
+#~ "more...</button></p>"
+#~ msgstr ""
+#~ "<p><button class=\"btn btn-small\"><i class=\"icon-plus-sign\"></i> Lire "
+#~ "la suite...</button></p>"
+
+#~ msgid "<i class=\"icon-arrow-left\"></i> Previous posts"
+#~ msgstr "<i class=\"icon-arrow-left\"></i> Articles précédents"
+
+#~ msgid "Next posts <i class=\"icon-arrow-right\"></i>"
+#~ msgstr "Articles suivants <i class=\"icon-arrow-right\"></i>"
 
 #, fuzzy
 #~ msgid "Daily Archives: %s"

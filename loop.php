@@ -47,7 +47,7 @@
 
 				<?php endif; ?>
 
-				<?php the_content( __( '<p><button class="btn btn-small"><i class="icon-plus-sign"></i> Read more...</button></p>', 'origines' ) ); ?>
+				<?php the_content( __( '<span class="label label-info">Read more...</span>', 'origines' ) ); ?>
 			
 			</div><!-- /.o-entry-content -->
 		
