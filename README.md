@@ -17,6 +17,9 @@ Demo: http://www.trbldr.fr/origines/
 
 WordPress Theme Package : http://bit.ly/origineswpzip
 
+Want to develop a child-theme ? Here is a good starting point :
+https://github.com/haroldparis/origines-child
+
 Translations:
 - en_EN
 - fr_FR
