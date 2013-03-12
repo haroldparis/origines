@@ -62,7 +62,7 @@ Use Origines:
 -------------
 
 Origines is in pre-release. You may use it for production, but there is still a 
-way to go to optimize the code and add more features. 
+way to go to optimize the code and to add more features. 
 
 Anyway, I think it's cool enough to be tested and used and I believe it shows 
 some potential.
@@ -72,11 +72,9 @@ some potential.
 All the themes images (icons, favicons, official logo, etc) are available in /origines/img/.
 You can modify them. 
 
-If you want to display your logo (max 30px height) in the top
+If you want to display your logo (max 30px height with the original template) in the top
 navigation bar in replacement of your WordPress title, you can register it in the
-header.php template (line 59) using the origines_logo function. 
-Your logo must be placed in /origines/img/ (via FTP or prior to
-uploading the theme)
+Origines Panel available in your Admin area.
 
 ### Widgets:
 

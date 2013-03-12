@@ -24,7 +24,7 @@ add_action( 'admin_init', 'theme_settings_init' );
  * Description : add settings page to menu
  */
 function add_settings_page() {
-	add_menu_page( __( 'Origines' ), __( 'Origines' ), 'manage_options', 'settings', 'theme_settings_page');
+	add_menu_page( __( 'Origines Panel' ), __( 'Origines Panel' ), 'manage_options', 'settings', 'theme_settings_page');
 }
 add_action( 'admin_menu', 'add_settings_page' );
 
@@ -44,7 +44,7 @@ $theme_options = array(
 	 
 	array( 
 		"name" => "Logo URL",
-		"desc" => "Enter the link to your logo image",
+		"desc" => "Enter the link to your logo image; the Origines original template supports logo max 30px height.",
 		"id" => $shortname."_logo",
 		"type" => "text",
 		"std" => ""
@@ -76,7 +76,7 @@ $theme_options = array(
 	 
 	array( "type" => "close"),
 
-		array( 
+	array( 
 		"name" => "Google Analytics",
 		"type" => "section"
 		),

@@ -59,16 +59,6 @@ add_image_size( 'origines-thumb', 870, 200, 1 );
  */
 function origines_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Hero', 'origines' ),
-		'id' => 'hero',
-		'description' => __( 'Appears on the homepage in a Bootstrap Hero Unit. Use text component.', 'origines' ),
-		'before_widget' => '<div class="o-widget o-hero-widget" itemprop="MainContentofPage">',
-		'after_widget' => '</div>',
-		'before_title' => '<header class="o-widget-title o-hero-widget-title entry-header page-header"><h1 class="entry-title">',
-		'after_title' => '</h1></header>',
-	) );
-
-	register_sidebar( array(
 		'name' => __( 'Sidebar', 'origines' ),
 		'id' => 'sidebar',
 		'description' => __( 'Appears on posts and pages except if full-width template is selected.', 'origines' ),
@@ -76,6 +66,16 @@ function origines_widgets_init() {
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="o-widget-title o-sidebar-widget-title">',
 		'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Hero', 'origines' ),
+		'id' => 'hero',
+		'description' => __( 'Appears on the homepage in a Bootstrap Hero Unit. Use text component.', 'origines' ),
+		'before_widget' => '<div class="o-widget o-hero-widget" itemprop="MainContentofPage">',
+		'after_widget' => '</div>',
+		'before_title' => '<header class="o-widget-title o-hero-widget-title entry-header page-header"><h1 class="entry-title">',
+		'after_title' => '</h1></header>',
 	) );
 	
 	register_sidebar( array(
