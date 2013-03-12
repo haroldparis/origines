@@ -9,6 +9,7 @@
  */
 
 require_once( trailingslashit( get_template_directory() ) . 'includes/origines-init.php');
+require_once( trailingslashit( get_template_directory() ) . 'includes/origines-admin.php');
 require_once( trailingslashit( get_template_directory() ) . 'includes/origines-walker.php');
 require_once( trailingslashit( get_template_directory() ) . 'includes/origines-entry-meta.php');
 require_once( trailingslashit( get_template_directory() ) . 'includes/origines-functions.php');

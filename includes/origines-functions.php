@@ -30,14 +30,15 @@ function origines_home_head() {
  * Function Name: origines_logo
  * Description: Check if a logo is defined and present it.
  */
-function origines_logo($logofile){
-	if ( $logofile == "yourfilename.png" ) {
+function origines_logo(){
+	$logofile = get_option('origines_logo');
+	if ( $logofile == "" ) {
 	?>
 		<a class="brand" href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'description' ); ?>"><?php bloginfo( 'name' ); ?></a>
 	<?php
 	} else {
 	?>
-		<a class="brand" style="padding: 5px 20px 5px;" href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'description' ); ?>"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/<?php echo $logofile; ?>" alt="<?php bloginfo( 'name' ); ?>" height="30px" /></a>
+		<a class="brand" style="padding: 5px 20px 5px;" href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'description' ); ?>"><img src="<?php echo get_option('origines_logo'); ?>" alt="<?php bloginfo( 'name' ); ?>" height="30px" /></a>
 	<?php
 	}
 }
@@ -81,8 +82,8 @@ function origines_footer_count_for_span() {
  * Description: Add Google Analytics Tracking Code to the head or the footer of your blog.
  */
 function origines_ga_tracking(){
-	$propertyID = 'UA-XXX'; // Replace 'UA-XXX' with GA Property ID
-	if ($propertyID != 'UA-XXX') {
+	$propertyID = get_option('origines_gaid'); 
+	if ($propertyID != "") {
 		?>
 
 		<script type="text/javascript">
