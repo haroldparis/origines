@@ -163,8 +163,9 @@ them:
 inside WordPress, 
 - Daniel Roche for his nice tutorial on how to rebuild breadcrumbs which helped me do it 
 Bootstrap's style: http://www.seomix.fr/fil-dariane-chemin-navigation/
-- bitacre for his nice tutorial here on how to rebuild comments which helped me do it
+- bitacre for his nice tutorial on how to rebuild comments which helped me do it
 Bootstrap's style as well using media: http://shinraholdings.com/621/custom-walker-to-extend-the-walker_comment-class/
+- Anang Pratika for his tutorial on how to create an admin area in a WordPress theme: http://colorlabsproject.com/tutorials/create-a-simple-wordpress-admin-panel/
 - And finally, Cameron Spear and Mattia Laurentis for their awesome work on Twitter 
 Bootstrap Hover Dropdown which was definitely perfect to adapt the behavior of the
 navbar to provide a better user experience: http://cameronspear.com/blog/twitter-bootstrap-dropdown-on-hover-plugin/
