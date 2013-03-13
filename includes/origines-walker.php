@@ -153,7 +153,7 @@ function origines_bread() {
 			$posts_page_url = get_page_uri($posts_page_id);  
 			$pos = strpos($uri,$posts_page_url);
 			if($pos !== false) {
-				$rendu .= $debutlien . $oseparator . 'Articles<li>';
+				$rendu .= $debutlien . $separator . 'Articles<li>';
 			}
 			else { $rendu .= $debutlien; } 
 		}
