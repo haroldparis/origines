@@ -9,8 +9,7 @@
  */
 
 /**
- * Function Name: origines_home_head
- * Description: Origines home head.
+ * Origines home head.
  */
 function origines_home_head() {
 	// check if hero unit is active and display it
@@ -27,8 +26,7 @@ function origines_home_head() {
 }
 
 /**
- * Function Name: origines_logo
- * Description: Check if a logo is defined and present it.
+ * Check if a logo is defined and present it.
  */
 function origines_logo(){
 	$logofile = get_option('origines_logo');
@@ -44,8 +42,7 @@ function origines_logo(){
 }
 
 /**
- * Function Name: origines_get_avatar
- * Description: Get the gravatar Origines style.
+ * Get the gravatar Origines style.
  */
 function origines_get_avatar($email, $size) {
 	$grav_url = "http://www.gravatar.com/avatar/" . 
@@ -54,8 +51,7 @@ function origines_get_avatar($email, $size) {
 }
 
 /**
- * Function Name: origines_footer_count_for_span
- * Description: Check the number of active footer widgets and returns an integer for styling purpose.
+ * Check the number of active footer widgets and returns an integer for styling purpose.
  */
 function origines_footer_count_for_span() {
 	// Count active sidebars.
@@ -78,8 +74,7 @@ function origines_footer_count_for_span() {
 }
 
 /**
- * Function Name: google_analytics_tracking_code
- * Description: Add Google Analytics Tracking Code to the head or the footer of your blog.
+ * Add Google Analytics Tracking Code to the head or the footer of your blog.
  */
 function origines_ga_tracking(){
 	$propertyID = get_option('origines_gaid'); 
@@ -106,12 +101,19 @@ function origines_ga_tracking(){
 add_action('wp_footer', 'origines_ga_tracking');
 
 /**
- * Function Name: remove_more_jump
- * Description: Remove the #more in the more button link.
+ * Remove the #more in the more button link.
  */
-function remove_more_jump( $link ) { 
+function origines_remove_more_jump( $link ) { 
 	return preg_replace( '/#more\-\d+/', '', $link );
 }
-add_filter( 'the_content_more_link', 'remove_more_jump' );
+add_filter( 'the_content_more_link', 'origines_remove_more_jump' );
+
+/**
+ * Modifying the rel in category links for W3C check.
+ */
+function origines_remove_category_rel( $link ) {
+    return str_replace( 'rel="category tag"', 'rel="tag"', $link );
+}
+add_filter( 'the_category', 'origines_remove_category_rel' );
 
 ?>
