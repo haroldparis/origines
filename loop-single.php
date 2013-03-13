@@ -34,7 +34,7 @@
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
 
 				<div id="o-author-info" class="well media">
-					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" alt="<?php the_author(); ?>" id="o-author-avatar-link" class="pull-left">
+					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php the_author(); ?>" id="o-author-avatar-link" class="pull-left">
 						<?php origines_get_avatar( get_the_author_meta( 'user_email' ), 96); ?>
 					</a>
 					<div id="o-author-description" class="media-body">
