@@ -353,7 +353,8 @@ class origines_walker_comment extends Walker_Comment {
 			<div class="muted comment-meta commentmetadata pull-right">
 				<small><em><?php
 				/* translators: 1: date, 2: time */
-				printf( __( '%1$s at %2$s', 'origines' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'origines' ), ' ' );
+				printf( __( '%1$s - %2$s', 'origines' ), get_comment_date(),  get_comment_time() );
+				edit_comment_link( __( '(Edit)', 'origines' ), ' ' );
 				?></em></small>
 			</div><!-- .comment-meta .commentmetadata -->
 			
