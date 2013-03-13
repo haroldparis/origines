@@ -112,7 +112,7 @@ add_filter( 'the_content_more_link', 'origines_remove_more_jump' );
  * Modifying the rel in category links for W3C check.
  */
 function origines_remove_category_rel( $link ) {
-    return str_replace( 'rel="category tag"', 'rel="tag"', $link );
+    return str_replace( 'rel="category tag"', '', $link );
 }
 add_filter( 'the_category', 'origines_remove_category_rel' );
 
