@@ -47,7 +47,7 @@ function origines_logo(){
 function origines_get_avatar($email, $size) {
 	$grav_url = "http://www.gravatar.com/avatar/" . 
 	md5(strtolower($email)) . "?s=" . $size;
-	echo "<img src='$grav_url' class='o-author-avatar img-polaroid' />";
+	echo "<img src='$grav_url' alt='" . get_the_author() . "' class='o-author-avatar img-polaroid' />";
 }
 
 /**
