@@ -53,7 +53,7 @@
 				</button>
 				<?php if (function_exists('origines_logo')) origines_logo(); ?>
                 <!-- to display the header-menu, you must create one and assign it to the header-menu location in your wp-admin Appearance/Menus options -->
-				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => nav, 'container_class' => 'nav-collapse collapse', 'menu_class' => 'nav', 'fallback_cb' => false, 'walker' => new origines_nav_walker() )); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => 'nav', 'container_class' => 'nav-collapse collapse', 'menu_class' => 'nav', 'fallback_cb' => false, 'walker' => new origines_nav_walker() )); ?>
 				<?php get_search_form(); ?>
 			</div> <!-- /.container -->
 		</div> <!-- /.navbar-inner -->
