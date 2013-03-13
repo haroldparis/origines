@@ -25,7 +25,7 @@
 				<?php the_post_thumbnail('', array('class' => 'o-thumbnail')); ?>
 			</a>
 
-			<h4 class="o-portfolio-element-title aligncenter"><a class="o-portfolio-element-title-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+			<h2 class="o-portfolio-element-title aligncenter"><a class="o-portfolio-element-title-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
 			<div class="o-portfolio-element-summary aligncenter">
 				<?php the_excerpt(); ?>
