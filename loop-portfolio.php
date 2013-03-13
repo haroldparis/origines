@@ -15,11 +15,11 @@
 
 <?php if ( $loop ) : ?>
 
-	<div class="row">
+	<div class="row" itemprop="MainContentofPage">
 
 	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	
-		<article id="project-<?php the_ID(); ?>" class="o-portfolio-element span4" itemprop="MainContentofPage">
+		<article id="project-<?php the_ID(); ?>" class="o-portfolio-element span4">
 
 			<a class="o-thumbnail-link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 				<?php the_post_thumbnail('', array('class' => 'o-thumbnail')); ?>
