@@ -24,14 +24,14 @@ add_action('wp_enqueue_scripts', 'origines_styles');
  * Description: Adding scripts the right way.
  */
 function origines_scripts_setup(){
-	wp_register_script('html5shiv', get_template_directory_uri() . '/js/html5shiv.js', false, null, false);
 	if (!is_admin()){
+		wp_register_script('html5shiv', get_template_directory_uri() . '/js/html5shiv.js', false, null, false);
 		wp_deregister_script('jquery'); 
 		wp_register_script('jquery', 'http://code.jquery.com/jquery-1.9.1.min.js', false, '1.9.1', true);
 		wp_enqueue_script('jquery');
+		wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '2.3.0', true);
+		wp_enqueue_script('bootstrap-hover', get_template_directory_uri() . '/js/twitter-bootstrap-hover-dropdown.min.js', array('bootstrap'), null, true);
 	}
-	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '2.3.0', true);
-	wp_enqueue_script('bootstrap-hover', get_template_directory_uri() . '/js/twitter-bootstrap-hover-dropdown.min.js', array('bootstrap'), null, true);
 }
 add_action('init', 'origines_scripts_setup');
 
