@@ -118,6 +118,26 @@ function origines_widgets_init() {
 		'before_title' => '<h3 class="o-widget-title o-footer-widget-title">',
 		'after_title' => '</h3>',
 	) );
+
+	register_sidebar( array(
+		'name' => __( 'Before Content', 'origines' ),
+		'id' => 'before-content',
+		'description' => __( 'Appears on posts and pages before the content.', 'origines' ),
+		'before_widget' => '<div class="o-widget o-bc-widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="o-widget-title o-bc-widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'After Content', 'origines' ),
+		'id' => 'after-content',
+		'description' => __( 'Appears on posts and pages after the content.', 'origines' ),
+		'before_widget' => '<div class="o-widget o-ac-widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="o-widget-title o-ac-widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'origines_widgets_init' );
 

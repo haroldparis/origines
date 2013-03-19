@@ -17,9 +17,17 @@
 		
 		<div id="o-main" class="span9">
 
+			<?php if ( is_active_sidebar( 'before-content' ) ) : ?>
+				<?php dynamic_sidebar( 'before-content' ); ?>
+			<?php endif; ?>
+
 			<?php if ( function_exists('origines_bread') ) origines_bread(); ?>
 		
 			<?php get_template_part( 'loop', 'page' ); ?>
+
+			<?php if ( is_active_sidebar( 'after-content' ) ) : ?>
+				<?php dynamic_sidebar( 'after-content' ); ?>
+			<?php endif; ?>
 		
 		</div><!-- /#o-main -->
 
