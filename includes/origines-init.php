@@ -33,7 +33,7 @@ function origines_scripts_setup(){
 		wp_enqueue_script('bootstrap-hover', get_template_directory_uri() . '/js/twitter-bootstrap-hover-dropdown.min.js', array('bootstrap'), null, true);
 	}
 }
-add_action('init', 'origines_scripts_setup');
+add_action('wp_enqueue_scripts', 'origines_scripts_setup');
 
 /**
  * Function Name: origines_theme_setup
