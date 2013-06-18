@@ -62,7 +62,7 @@
               			<?php } ?>
 
                 		<?php if ( get_the_author_meta( 'user_url' ) ) { ?>
-							<a class="btn btn-small btn-primary" href="<?php the_author_meta( 'user_url' ); ?>"><i class="icon-bookmark"></i> <?php printf( __( "Visit %s's website", 'origines' ), get_the_author() ); ?></a>
+							<a class="btn btn-small btn-primary" href="<?php the_author_meta( 'user_url' ); ?>"><i class="icon-bookmark icon-white"></i> <?php printf( __( "Visit %s's website", 'origines' ), get_the_author() ); ?></a>
 						<?php } ?>
 
 					</div> <!-- /#o-author-description -->
