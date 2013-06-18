@@ -52,10 +52,23 @@
 							<?php printf( __( 'About %s', 'origines' ), get_the_author() ); ?>
 						</h4> <!-- /#o-author-info-title -->
 						<p><?php the_author_meta( 'description' ); ?></p>
+
+						<?php if ( get_the_author_meta( 'twitter' ) ) { ?>
+                    		<a class="btn btn-small" href="https://twitter.com/<?php the_author_meta( 'twitter' ); ?>"><i class="icon-user"></i> <?php printf( __( 'Follow %s on Twitter', 'origines' ), get_the_author() ); ?></a>
+                		<?php } ?>
+
+ 						<?php if ( get_the_author_meta( 'googleplus' ) ) { ?>
+              				<a class="btn btn-small" href="<?php the_author_meta( 'googleplus' ); ?>?rel=author"><i class="icon-ok-circle"></i> <?php printf( __( 'Circle %s on Google+', 'origines' ), get_the_author() ); ?></a> 
+              			<?php } ?>
+
+                		<?php if ( get_the_author_meta( 'user_url' ) ) { ?>
+							<a class="btn btn-small btn-primary" href="<?php the_author_meta( 'user_url' ); ?>"><i class="icon-bookmark"></i> <?php printf( __( "Visit %s's website", 'origines' ), get_the_author() ); ?></a>
+						<?php } ?>
+
 					</div> <!-- /#o-author-description -->
 				</div> <!-- /#o-author-info -->
-			
-			<?php endif; ?>
+
+				<?php endif; ?>
 				
 			<?php
 			/* Since we called the_post() above, we need to
