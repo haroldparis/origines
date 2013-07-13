@@ -108,10 +108,14 @@ class origines_nav_walker extends Walker_Nav_Menu {
 }
 
 /**
- * Name: origines_breadcrumbs
+ * Name: origines_bread
  * Description: Get the breadcrumbs Origines style.
  * Credits: Thanks to Daniel Roche for his nice tutorial here : http://www.seomix.fr/fil-dariane-chemin-navigation/
  */
+function origines_bread() {
+	do_action('origines_bread');
+}
+
 
 //Récupérer les catégories parentes
 function myget_category_parents($id, $link = false, $nicename = false, $visited = array()) {
@@ -130,7 +134,7 @@ function myget_category_parents($id, $link = false, $nicename = false, $visited 
 }
 
 //Le rendu
-function origines_bread() {
+function myorigines_bread() {
 	// variables globales
 	global $wp_query; 
 	$ped=get_query_var('paged'); 
@@ -257,6 +261,7 @@ function origines_bread() {
 	$rendu .= '</ul></div> <!-- /#o-breadcrumb -->';
 	echo $rendu;
 }
+add_action('origines_bread', 'myorigines_bread');
 
 /**
  * Name: origines_widget_tag_cloud_args
